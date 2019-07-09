@@ -1,5 +1,7 @@
 # @scipe/documentation
 
+[![CircleCI](https://circleci.com/gh/science-periodicals/documentation.svg?style=svg&circle-token=f84769b939a4c31d2245119a959784bb4813ad29)](https://circleci.com/gh/science-periodicals/documentation)
+
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 [sci.pe](https://sci.pe) documentation website
