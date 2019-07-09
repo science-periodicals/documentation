@@ -1,0 +1,201 @@
+.vision-page {
+  font: var(--ui-type);
+  color: var(--ui-type__color);
+  letter-spacing: var(--ui-type__letter-spacing);
+
+  & .text-logo {
+    /* patch for when the logo appears inside of a text-transformed parent */
+    text-transform: lowercase;
+  }
+
+  & .layout-wrap-item {
+    /* be default empty LayoutWrapItem will shrink relative to other 
+    LayoutWrapItem with content. make sure it stays equal in size */
+
+    flex: 1 1 50%;
+  }
+
+  &__headline {
+    padding-bottom: var(--mgrd);
+    text-align: center;
+    font: var(--ui-type--display-1);
+    color: var(--ui-type--display-1__color);
+    color: var(--text-color);
+    letter-spacing: 0.015em;
+    margin: var(--lgrd) var(--mgrd);
+    /* text-transform: uppercase; */
+
+    @media (--tablet) {
+      font: var(--ui-type--headline);
+      margin: var(--sgrd);
+    }
+  }
+
+  &__content {
+    padding: var(--xlgrd);
+  }
+
+  &__section {
+    padding: var(--lgrd) 0;
+    border-bottom: 2px solid var(--ruling-color);
+  }
+
+  &__first-line-spacer {
+    height: 3em;
+  }
+
+  &__section-title {
+    font: var(--ui-type--subhead-1);
+    color: var(--ui-type--subhead-1__color);
+    letter-spacing: var(--ui-type--subhead-1__letter-spacing);
+    margin-bottom: 1em;
+    text-transform: capitalize;
+  }
+
+  &__sub-section-title {
+    font: var(--ui-type--subhead-2);
+    color: var(--ui-type--subhead-2__color);
+    letter-spacing: var(--ui-type--subhead-2__letter-spacing);
+    margin-bottom: 1em;
+  }
+
+  &__lead-copy {
+    font-weight: 500;
+  }
+  &__copy {
+    padding-right: 1em;
+    margin-bottom: 1em;
+  }
+
+  &__pull-quote {
+    margin-bottom: 1ch;
+    margin-left: 1ch;
+    position: relative;
+
+    &:before {
+      content: '“';
+      font-style: oblique;
+      font-size: 48px;
+      left: -1ch;
+      padding-right: 0.5ch;
+      position: relative;
+      top: 0.35em;
+      position: absolute;
+    }
+  }
+  &__pull-quote-text {
+    font: var(--serif-body-type--big--callout);
+    color: var(--serif-body-type--big__color);
+    letter-spacing: var(--serif-body-type--big__letter-spacing--callout);
+    font-style: oblique;
+  }
+
+  &__pull-quote-ref {
+    font: var(--ui-type--small);
+    color: var(--text-color--light);
+    padding-left: 1ch;
+    &:any-link {
+      color: var(--text-color--light);
+    }
+    &:hover {
+      color: var(--accent-color);
+    }
+    &:before {
+      content: ' –';
+      color: var(--text-color--light);
+    }
+  }
+
+  &__timeline {
+    padding: var(--sgrd);
+    margin: var(--sgrd) 0;
+    background-color: var(--grey-50);
+    &__item {
+      display: flex;
+      font: var(--ui-type--small);
+      color: var(--text-color--light);
+
+      &__year {
+        flex: 0 0 auto;
+        padding-right: var(--xsgrd);
+      }
+      &__text {
+        border-left: 1px solid var(--ruling-color);
+        padding-left: var(--xsgrd);
+        padding-right: var(--sgrd);
+        flex: 0 1 auto;
+      }
+    }
+  }
+
+  &__chart {
+    padding: var(--sgrd) var(--sgrd) var(--xsgrd);
+    margin: var(--sgrd) 0;
+    background-color: var(--grey-50);
+
+    &__title {
+      font: var(--ui-type);
+      font-variant: small-caps;
+
+      text-align: center;
+      letter-spacing: 0.125em;
+      margin-top: var(--xsgrd);
+      margin-bottom: var(--sgrd);
+    }
+
+    &__img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: contain;
+    }
+
+    &__key {
+      font: var(--ui-type--small);
+      font-variant: small-caps;
+      color: var(--text-color--light);
+      text-align: center;
+      display: block;
+      letter-spacing: 0.125em;
+      margin: var(--xsgrd) 0;
+    }
+  }
+
+  &__chart-ref {
+    text-align: center;
+    font: var(--ui-type--small);
+    color: var(--text-color--light);
+    & :any-link {
+      color: var(--text-color--light);
+    }
+    &__link {
+      font-style: oblique;
+    }
+  }
+
+  &__figure {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--sgrd);
+
+    &--diagram {
+      background-color: var(--grey-50);
+      padding: 0 var(--mgrd);
+      & .diagram {
+        &__illustration {
+          margin-bottom: 0;
+          transform: scale(0.9);
+        }
+        &__figcaption {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__list {
+    padding-left: 0;
+    & > li {
+      margin-bottom: 1em;
+    }
+  }
+}

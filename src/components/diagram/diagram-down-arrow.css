@@ -1,0 +1,45 @@
+.diagram-down-arrow {
+  width: 30px;
+  height: 80px;
+  opacity: 0.9;
+  &__mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 80px;
+    background: green;
+    mask-image: url('/images/diagram/arrow-down-mask.svg');
+    mask-size: 30px;
+    mask-repeat: no-repeat;
+  }
+
+  &__img {
+    /* width: 100%; */
+    width: 30px;
+    position: absolute;
+    animation-name: cycledown;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* animation-play-state: paused; */
+  }
+
+  &--animate &__img {
+    animation-play-state: running;
+    animation-duration: 1.5s;
+  }
+}
+
+@keyframes cycledown {
+  from {
+    transform: translate(0px, -40px);
+    /* left: -20px;
+    top: -12px; */
+  }
+  to {
+    transform: translate(-0px, -19px);
+    /* left: 0px;
+    top: 0px; */
+  }
+}

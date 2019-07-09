@@ -1,0 +1,925 @@
+/* !!!! BE SURE THAT EVERYTHING IS SCOPED WITHIN .ds3 */
+
+/* global styles to be user by subcomponents - part of css refactor */
+.ds3 {
+  font: var(--ui-type);
+  color: var(--ui-type__color);
+  letter-spacing: var(--ui-type__letter-spacing);
+  line-height: 1.8em; /* make space for inline blocked element styles */
+
+  &__section-title {
+    font: var(--ui-type--subhead-2);
+    color: var(--ui-type--subhead-2__color);
+    letter-spacing: var(--ui-type--subhead-2__letter-spacing);
+  }
+
+  & code {
+    font: var(--mono-type);
+    letter-spacing: var(--mono-type__letter-spacing);
+  }
+}
+
+.ds3 * {
+  box-sizing: border-box;
+}
+
+/* use to force to break URL and other long lines to prevent horizontal scrolling on mobile */
+.ds3 .force-break {
+  word-wrap: break-word;
+}
+
+/* a built in tool e.g 'the cross-reference tool' */
+.ds3 .ms-feature {
+  /*font-style: italic;*/
+  color: grey;
+  padding: 2px 4px;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 0.05em;
+  border-radius: 1px;
+  white-space: nowrap;
+  box-shadow: 1px 1px 3px lightgrey;
+}
+
+/* A label from a menu or a window (e.g. Insert, Reference Type:)*/
+.ds3 .ms-label {
+  color: grey;
+  font-weight: 400;
+  text-transform: capitalize;
+  box-shadow: 1px 1px 4px whitesmoke;
+  padding: 1px 3px;
+  white-space: nowrap;
+  border: 1px solid lightgrey;
+  box-sizing: border-box;
+}
+
+/* a label from a button */
+.ds3 .ms-button {
+  color: grey;
+  padding: 2px 4px;
+  font-weight: 300;
+  text-transform: capitalize;
+  letter-spacing: 0.05em;
+  border: 2px solid grey;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 3px lightgrey;
+  white-space: nowrap;
+}
+
+/* a value from a select control or a menu */
+.ds3 .ms-value {
+  color: white;
+  background-color: grey;
+  padding: 2px 4px;
+  font-weight: 300;
+  text-transform: capitalize;
+  letter-spacing: 0.05em;
+  border-radius: 1px;
+  white-space: nowrap;
+  box-shadow: 1px 1px 3px lightgrey;
+}
+/* a style (heading 1) ...*/
+.ds3 .ms-style {
+  font-style: italic;
+}
+
+.ds3 .ms-screentip,
+.ds3 li.style-guide__step li.ms-screentip {
+  background-color: rgb(236, 236, 236);
+  border-radius: 4px;
+  padding: 16px;
+  position: relative;
+}
+.ds3 .ms-screentip::after {
+  content: ' ';
+  height: 0;
+  position: absolute;
+  width: 0;
+  border: 10px solid transparent;
+  border-top-color: rgb(236, 236, 236);
+  top: 100%;
+  left: 10px;
+}
+
+.ds3 a {
+  color: #2196f3;
+}
+.ds3 a,
+.ds3 :link,
+.ds3 :visited {
+  text-decoration: none;
+  color: #2196f3;
+}
+.ds3 a:active {
+  color: #64b5f6;
+}
+.ds3 a.doclink,
+.ds3 a.doclink:active,
+.ds3 a.doclink:link,
+.ds3 a.doclink:visited {
+  color: #434343;
+  cursor: default;
+}
+
+.ds3 .scienceai {
+  background-color: #fff;
+  padding: 8px 25px;
+  width: 100%;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  display: inline-block;
+  vertical-align: middle;
+  height: 52px;
+  margin-bottom: 10px;
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+  box-shadow: 2px 2px 5px #bcbcbc;
+}
+
+.ds3 main {
+  margin: 43px auto;
+  max-width: 1024px;
+  min-height: 500px;
+  padding: 0 var(--lgrd);
+  overflow-x: auto;
+}
+
+.ds3 .title {
+  text-align: center;
+  padding-top: var(--lgrd);
+}
+
+.ds3 .title img {
+  width: 620px;
+  max-width: 100%;
+}
+
+.ds3 h1,
+.ds3 h2,
+.ds3 h3,
+.ds3 h4,
+.ds3 h5,
+.ds3 h6 {
+  font-weight: 400;
+  /*text-transform: uppercase;*/
+  letter-spacing: 0.035;
+  page-break-after: avoid;
+  font-family: var(--ui-type-face);
+  padding: var(--sgrd) 0;
+  /*scroll-snap-coordinate: 0px 0px;*/
+}
+
+.ds3 h1 {
+  font: var(--ui-type--headline);
+  color: var(--ui-type--headline__color);
+  letter-spacing: var(--ui-type--headline__letter-spacing);
+}
+
+.ds3 h2 {
+  font: var(--ui-type--subhead-1);
+  color: var(--ui-type--subhead-1__color);
+  letter-spacing: var(--ui-type--subhead-1__letter-spacing);
+}
+
+.ds3 h3 {
+  font: var(--ui-type--subhead-2);
+  color: var(--ui-type--subhead-2__color);
+  letter-spacing: var(--ui-type--subhead-2__letter-spacing);
+}
+
+.ds3 h4,
+.ds3 h5,
+.ds3 h6 {
+  font: var(--ui-type--subhead-3);
+  color: var(--ui-type--subhead-3__color);
+  letter-spacing: var(--ui-type--subhead-3__letter-spacing);
+}
+
+.ds3 ul,
+.ds3 ol {
+  padding-left: 0;
+}
+
+.ds3 li {
+  margin-left: 16px;
+  margin-bottom: 16px;
+}
+
+.ds3 aside li {
+  margin-bottom: 8px;
+}
+
+.ds3 .eg,
+.ds3 .example {
+  line-height: 32px;
+}
+
+.ds3 .eg::before {
+  content: 'e.g., ';
+}
+
+.ds3 .example {
+  /*border: 1px solid red;*/
+  overflow: auto;
+}
+.ds3 .example::before {
+  content: 'Example:\A';
+  white-space: pre-wrap;
+  font-weight: bold;
+}
+
+.ds3 ul.example::before {
+  content: 'Examples:\A';
+  white-space: pre-wrap;
+  font-weight: bold;
+}
+
+.ds3 dd .example::before {
+  font-weight: normal;
+}
+
+.ds3 .example li:last-child,
+.ds3 .eg li:last-child {
+  margin-bottom: 16px;
+}
+
+.ds3 ul.example,
+.ds3 ol.example {
+  margin-left: 0;
+}
+
+.ds3 .format {
+  background-color: whitesmoke;
+  padding: 12px 32px;
+  margin-bottom: 20px;
+  overflow: auto;
+}
+
+.ds3 .pattern {
+  text-align: center;
+}
+
+.ds3 ul.pattern {
+  text-align: left;
+}
+
+.ds3 .credit-lines .pattern,
+.ds3 .credit-lines li,
+.ds3 .credit-lines ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.ds3 .token {
+  margin-right: 2px;
+  margin-left: 2px;
+  background-color: #ffebee;
+  color: #f44336;
+}
+
+.ds3 dl {
+  /*border-top: 1px solid white;*/
+  background-color: whitesmoke;
+  padding: 24px 32px;
+  clear: both;
+}
+.ds3 dl h4 {
+  margin-top: 0;
+}
+
+.ds3 dt {
+  float: left;
+  clear: left;
+  width: 25%;
+  font-weight: 500;
+  vertical-align: top;
+}
+.ds3 dd {
+  margin-left: 25%;
+  margin-bottom: 16px;
+  vertical-align: top;
+}
+.ds3 dd p:first-child {
+  display: inline-block;
+}
+
+.ds3 figure {
+  margin: 0;
+}
+
+.ds3 figure img {
+  margin: 0 auto;
+  padding: 0 1% 2% 1%;
+  display: block;
+  width: 40%;
+}
+
+.ds3 li,
+.ds3 p {
+  clear: both;
+}
+
+.ds3 .cross-reference {
+  position: relative;
+  background-color: lightgrey;
+}
+.ds3 .cross-reference::after {
+  white-space: nowrap;
+  content: 'cross-reference';
+  position: absolute;
+  left: 0;
+  top: calc(1em - 9px);
+  line-height: 8px;
+  top: -8px;
+  font-size: 8px;
+  padding: 1px 2px 1px 2px;
+  margin: 0;
+  color: white;
+  background-color: lightgrey;
+  text-transform: uppercase;
+}
+
+.ds3 .caption-label {
+  position: relative;
+  background-color: #82b1ff;
+}
+
+.ds3 .caption-label::after {
+  white-space: nowrap;
+  content: 'caption label';
+  position: absolute;
+  left: 0;
+  top: calc(1em - 9px);
+  line-height: 8px;
+  top: -8px;
+  font-size: 8px;
+  padding: 1px 2px 1px 2px;
+  margin: 0;
+  color: white;
+  background-color: #82b1ff;
+  text-transform: uppercase;
+}
+
+.ds3 .footnote {
+  background-color: lightgrey;
+}
+
+.ds3 .magick {
+  /* TODO */
+}
+
+.ds3 .person {
+  position: relative;
+  border-bottom: 1px solid #90caf9;
+  /*padding: 0 2px;*/
+}
+.ds3 .person::before {
+  content: 'person';
+  position: absolute;
+  left: 0;
+  line-height: 8px;
+  top: calc(1em + 8px);
+  height: 9px;
+  box-sizing: border-box;
+  font-size: 8px;
+  padding: 1px 2px 1px 2px;
+  margin: 0;
+  color: white;
+  background-color: #90caf9;
+  text-transform: uppercase;
+}
+
+.ds3 .subject {
+  position: relative;
+  border-bottom: 1px solid #66bb6a;
+  /*padding: 0 2px;*/
+}
+.ds3 .subject::before {
+  content: 'subject';
+  position: absolute;
+  left: 0;
+  line-height: 8px;
+  top: calc(1em + 8px);
+  height: 9px;
+  box-sizing: border-box;
+  font-size: 8px;
+  padding: 1px 2px 1px 2px;
+  margin: 0;
+  color: white;
+  background-color: #66bb6a;
+  text-transform: uppercase;
+}
+
+.ds3 .organization {
+  position: relative;
+  border-bottom: 1px solid #ffcc80;
+}
+.ds3 .organization::before {
+  content: 'organization';
+  position: absolute;
+  left: 0;
+  line-height: 8px;
+  top: calc(1em + 8px);
+  height: 9px;
+  box-sizing: border-box;
+  font-size: 8px;
+  padding: 1px 2px 1px 2px;
+  margin: 0;
+  color: white;
+  background-color: #ffcc80;
+  text-transform: uppercase;
+}
+
+.ds3 .predicate {
+  position: relative;
+  border-bottom: 1px solid #ce93d8;
+}
+.ds3 .predicate::before {
+  content: 'predicate';
+  position: absolute;
+  left: 0;
+  line-height: 8px;
+  top: calc(1em + 8px);
+  height: 9px;
+  box-sizing: border-box;
+  font-size: 8px;
+  padding: 1px 2px 1px 2px;
+  margin: 0;
+  color: white;
+  background-color: #ce93d8;
+  text-transform: uppercase;
+}
+
+.ds3 .award {
+  position: relative;
+  border-bottom: 1px solid #f48fb1;
+}
+.ds3 .award::before {
+  content: 'award';
+  position: absolute;
+  left: 0;
+  line-height: 8px;
+  top: calc(1em + 8px);
+  height: 9px;
+  box-sizing: border-box;
+  font-size: 8px;
+  padding: 1px 2px 1px 2px;
+  margin: 0;
+  color: white;
+  background-color: #f48fb1;
+  text-transform: uppercase;
+}
+
+.ds3 .resource {
+  position: relative;
+  border-bottom: 1px solid #ef9a9a;
+}
+.ds3 .resource::before {
+  content: 'resource';
+  position: absolute;
+  left: 0;
+  line-height: 8px;
+  top: calc(1em + 8px);
+  height: 9px;
+  box-sizing: border-box;
+  font-size: 8px;
+  padding: 1px 2px 1px 2px;
+  margin: 0;
+  color: white;
+  background-color: #ef9a9a;
+  text-transform: uppercase;
+}
+
+.ds3 .entity {
+  position: relative;
+  border-bottom: 1px solid rgb(252, 229, 206);
+}
+.ds3 .entity::before {
+  content: 'entity';
+  position: absolute;
+  left: 0;
+  line-height: 8px;
+  top: calc(1em + 8px);
+  height: 9px;
+  box-sizing: border-box;
+  font-size: 8px;
+  padding: 1px 2px 1px 2px;
+  margin: 0;
+  color: white;
+  background-color: rgb(252, 229, 206);
+  text-transform: uppercase;
+}
+
+.ds3 .identifier {
+  position: relative;
+  border-bottom: 1px solid rgb(252, 229, 206);
+}
+.ds3 .identifier::before {
+  content: 'identifier';
+  position: absolute;
+  left: 0;
+  line-height: 8px;
+  top: calc(1em + 8px);
+  height: 9px;
+  box-sizing: border-box;
+  font-size: 8px;
+  padding: 1px 2px 1px 2px;
+  margin: 0;
+  color: white;
+  background-color: rgb(252, 229, 206);
+  text-transform: uppercase;
+}
+
+.ds3 .bookmark {
+  position: relative;
+  border-bottom: 1px solid grey;
+}
+.ds3 .bookmark::before {
+  content: 'bookmark';
+  position: absolute;
+  left: 0;
+  line-height: 8px;
+  top: calc(1em + 8px);
+  height: 9px;
+  box-sizing: border-box;
+  font-size: 8px;
+  padding: 1px 2px 1px 2px;
+  margin: 0;
+  color: white;
+  background-color: grey;
+  text-transform: uppercase;
+}
+
+.ds3 .citation {
+  position: relative;
+  border-bottom: 1px solid #ff9800;
+}
+.ds3 .citation::before {
+  content: 'citation';
+  position: absolute;
+  left: 0;
+  line-height: 8px;
+  top: calc(1em + 8px);
+  height: 9px;
+  box-sizing: border-box;
+  font-size: 8px;
+  padding: 1px 2px 1px 2px;
+  margin: 0;
+  color: white;
+  background-color: #ff9800;
+  text-transform: uppercase;
+}
+
+.ds3 table {
+  margin-bottom: 2%;
+}
+
+.ds3 .more {
+  clear: both;
+  text-transform: uppercase;
+}
+
+.ds3 .more a {
+  margin-right: 10px;
+}
+
+.ds3 .summary section {
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.ds3 .summary section h3 {
+  margin: 24px 0px 48px 0px;
+  padding-top: 24px;
+  border-top: 2px solid lightgrey;
+}
+
+.ds3 figcaption {
+  margin-top: 24px;
+}
+
+.ds3 figcaption h4 {
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+.ds3 .warning {
+  background-color: #ffebee;
+  border-left: 5px solid #ef9a9a;
+  padding: 16px;
+}
+
+.ds3 section > img {
+  float: left;
+}
+.ds3 section.badge {
+  overflow: hidden;
+}
+
+.ds3 img#ds3-badge {
+  height: 50px;
+  display: block;
+}
+
+.ds3 a[rel='license'] {
+  border-width: 0;
+}
+
+.ds3 .style-guide figure {
+  clear: both;
+  border-top: 2px solid whitesmoke;
+  padding-top: 24px;
+  padding-bottom: 32px;
+}
+
+.ds3 .step-container {
+  border-top: 1px solid whitesmoke;
+  padding-top: 24px;
+}
+
+.ds3 .style-guide ol.style-guide__steps {
+  margin-top: 0px;
+  counter-reset: item;
+}
+
+.ds3 .style-guide ol.style-guide__steps > li.style-guide__step,
+figcaption li,
+aside .example li {
+  display: block;
+  list-style: none;
+  margin-left: 0;
+}
+.ds3 .style-guide ol.style-guide__steps > li::before {
+  content: counter(item) '';
+  counter-increment: item;
+  color: grey;
+  font-size: 12px;
+  font-weight: 600;
+  page-break-after: avoid;
+  orphans: 2;
+}
+
+.ds3 li.style-guide__step ol {
+  list-style-type: lower-alpha;
+}
+.ds3 li.style-guide__step li {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.ds3 .style-guide figure figcaption {
+  width: 50%;
+  float: left;
+  margin: 0;
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+
+.ds3 .style-guide figure > img {
+  width: 50%;
+  padding-left: 24px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+.ds3 .style-guide figure > section {
+  width: 50%;
+}
+.ds3 .style-guide figure > section img {
+  width: 100%;
+}
+.ds3 .style-guide__step > section {
+  border-top: 1px solid whitesmoke;
+}
+
+.ds3 section.style-guide__group {
+  /*margin: 64px 0;*/
+  clear: both;
+  padding: 50px 0px;
+}
+.ds3 section.style-guide__group:not(:last-child) {
+  border-bottom: 2px solid lightgrey;
+}
+
+.ds3 section.style-guide__subgroup {
+  /*margin: 64px 0;*/
+  clear: both;
+  padding: 32px 0px;
+}
+
+.ds3 section.style-guide__group p {
+  margin-top: 0;
+}
+.ds3 .style-guide dl.element-mapping {
+  width: 50%;
+  float: left;
+  border: 5px solid white;
+  box-sizing: border-box;
+  clear: none;
+}
+.ds3 .style-guide dl.element-mapping dt {
+  width: 50%;
+}
+.ds3 .style-guide dl.element-mapping dd {
+  margin-left: 50%;
+}
+
+.ds3 .style-guide dl h4,
+.format h4,
+.format h5 {
+  border-bottom: 2px solid white;
+  padding-bottom: 16px;
+}
+
+.ds3 footer p {
+  max-width: 900px;
+  padding: 14px 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+.ds3 footer a {
+  color: slategray;
+  text-decoration: none;
+}
+.ds3 footer img {
+  vertical-align: -4px;
+  background: white;
+  border-radius: 3px;
+  padding: 1px;
+  box-sizing: content-box;
+}
+.ds3 p.back {
+  text-align: right;
+}
+.ds3 p.back a {
+  text-decoration: none;
+}
+
+/* clear fix */
+.ds3 figure::after, .ds3 .clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.ds3 .hidden {
+  display: none;
+}
+
+.ds3 blockquote {
+  line-height: 1.3em;
+}
+.ds3 blockquote cite::before {
+  content: '\2014 ';
+  color: #f44336;
+  background-color: #ffebee;
+}
+
+.ds3 q::before {
+  content: open-quote;
+  color: #f44336;
+  background-color: #ffebee;
+}
+.ds3 q::after {
+  content: close-quote;
+  color: #f44336;
+  background-color: #ffebee;
+}
+
+/* example tables */
+
+.ds3 div table {
+  text-align: left;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.ds3 figure div table {
+  width: 50%;
+}
+
+.ds3 div thead th[scope='colgroup'] {
+  vertical-align: top;
+  border-bottom: 1px solid white;
+}
+
+.ds3 div thead th {
+  vertical-align: top;
+  border-bottom: 1px solid black;
+}
+
+.ds3 div thead th[scope='colgroup']:first-child {
+  border-left: none;
+}
+
+.ds3 div thead th[scope='colgroup']:nth-child(even) {
+  border-right: 20px solid rgb(232, 240, 254);
+}
+
+.ds3 div thead th[scope='colgroup']:last-child {
+  border-right: none;
+}
+
+.ds3 div td,
+.ds3 div tfoot th {
+  border-top: 1px solid lightgrey;
+}
+
+.ds3 div th,
+div td,
+.ds3 div caption {
+  padding: 10px;
+}
+
+.ds3 div tbody tr:first-child th,
+.ds3 div tbody tr:first-child td {
+  border-top: 1px solid black;
+}
+
+.ds3 div tr[aria-level='2'] th {
+  padding-left: 40px;
+}
+
+.ds3 div th {
+  color: rgb(98, 157, 244);
+}
+.ds3 div thead {
+  background-color: rgb(232, 240, 254);
+}
+
+.ds3 div tfoot tr:first-child th,
+.ds3 div tfoot tr:first-child td {
+  border-top: 3px double black;
+}
+
+.ds3 div tfoot {
+  background-color: rgb(245, 245, 245);
+}
+
+.ds3 dt.indent {
+  padding-left: 2em;
+}
+
+@media screen and (max-width: 980px) {
+  .ds3 .scienceai .logo {
+    height: 24px;
+    margin-top: 2px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .ds3 .title img {
+    width: 420px;
+  }
+  .ds3 figure img {
+    margin: 24px auto;
+    width: 100%;
+    float: none;
+    padding: 0;
+  }
+
+  .ds3 figure table {
+    width: 100%;
+  }
+
+  .ds3 .style-guide figure > img {
+    width: 100%;
+    padding: 0;
+  }
+  .ds3 .style-guide figure > figcaption {
+    width: 100%;
+    padding: 0;
+  }
+  .ds3 .style-guide figure > section {
+    width: 100%;
+  }
+  .ds3 .style-guide dl.element-mapping {
+    float: none;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .ds3 .title img {
+    width: 220px;
+  }
+  .ds3 figure table {
+    width: 100%;
+  }
+}
+
+@media print {
+  .ds3 .scienceai {
+    position: static;
+    border-top: 0;
+    box-shadow: none;
+  }
+  .ds3 a[href^='http']::after {
+    content: '(' attr(href) ')';
+  }
+  .ds3 .scienceai a[href^='http']::after {
+    content: none;
+  }
+}

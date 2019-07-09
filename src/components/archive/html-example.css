@@ -1,0 +1,101 @@
+@import 'highlight.js/styles/github-gist.css';
+
+.html-example {
+  border: 1px solid var(--grey-100);
+  margin: var(--sgrd) 0;
+
+  &__html {
+    border: 1px solid var(--grey-100);
+    padding: var(--sgrd);
+    border-left-width: 7px;
+    background-color: var(--grey-50);
+    overflow-x: auto;
+    & pre {
+      font-size: 12px;
+      line-height: 13px;
+    }
+  }
+
+  &__jsonld {
+    & pre {
+      overflow-x: auto;
+      font-size: 12px;
+      line-height: 13px;
+
+      & .jsonld-markup {
+        padding: var(--mgrd);
+        text-align: left;
+        background-color: rgb(51, 51, 51);
+        color: rgb(144, 157, 181);
+
+        & abbr {
+          text-decoration: underline;
+        }
+
+        & a {
+          text-decoration: none;
+        }
+        & a:hover {
+          text-decoration: underline;
+        }
+
+        & .jsonld-markup-key-context,
+        & .jsonld-markup-key-id,
+        & .jsonld-markup-key-value,
+        & .jsonld-markup-key-type {
+          color: rgb(202, 136, 81);
+        }
+
+        & .jsonld-markup-list {
+          color: rgb(189, 107, 122);
+        }
+
+        /*
+.jsonld-example .jsonld-markup-set {
+color: rgb(79,83,91);
+}
+       */
+        & .jsonld-markup-key a {
+          color: rgb(189, 107, 122);
+        }
+
+        & .jsonld-markup-string a {
+          color: rgb(137, 179, 121);
+        }
+      }
+    }
+  }
+
+  &__viz {
+    overflow: auto;
+    width: 100%;
+    & .tree {
+      overflow-x: scroll;
+    }
+
+    & svg {
+      border: none;
+    }
+
+    & .link {
+      fill: none;
+      stroke: #dadfe1;
+      stroke-width: 1px;
+    }
+
+    & .node {
+      cursor: pointer;
+      & text {
+        font-size: 12px;
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+        fill: #333333;
+      }
+    }
+  }
+
+  &__default-ui-type--caption {
+    padding: var(--xsgrd);
+    color: var(--text-color--light);
+    text-align: center;
+  }
+}

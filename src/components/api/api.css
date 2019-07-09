@@ -1,0 +1,14 @@
+.api {
+  &__header {
+    padding: 0 var(--lgrd);
+    padding-top: var(--mgrd);
+    text-align: center;
+
+    & img {
+      padding: var(--mgrd);
+      width: 620px;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+  }
+}

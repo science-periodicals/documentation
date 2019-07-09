@@ -1,0 +1,12 @@
+.code-example {
+  & pre {
+    overflow: auto;
+  }
+
+  &__default-ui-type--caption {
+    padding: var(--xsgrd);
+    color: var(--text-color--light);
+    text-align: center;
+    background-color: var(--grey-50);
+  }
+}

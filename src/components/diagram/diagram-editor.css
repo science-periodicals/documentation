@@ -1,0 +1,99 @@
+.diagram-editor {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  filter: grayscale(var(--base-grayscale));
+
+  /* make sure mouse events only capture on the component parts */
+  cursor: pointer;
+  pointer-events: none;
+  & > * {
+    pointer-events: auto;
+  }
+
+  &--active {
+    filter: none;
+    /* animation-name: slowpulse;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate; */
+  }
+
+  &__arrow {
+    z-index: 0;
+    position: absolute;
+    left: 50px;
+    top: 10px;
+    animation: fadeindl 1s ease both;
+    animation-delay: 2s;
+  }
+
+  &__docs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+  }
+  &--active &__docs {
+    animation-name: pulsedl;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-fill-mode: none;
+  }
+  &__editor-panel {
+    width: 61px;
+    position: absolute;
+    z-index: 10;
+    animation: fadeindl 1s ease both;
+    animation-delay: 0s;
+    left: 15px;
+  }
+  &--active &__editor-panel {
+    /* animation-name: pulsedl;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate; */
+  }
+
+  &__ms-img {
+    position: absolute;
+    width: 47px;
+    z-index: 20;
+    top: 10px;
+    left: 0px;
+    opacity: 0.9;
+    animation: fadeindl 1s ease both;
+    animation-delay: 1s;
+  }
+  &--active &__ms-img {
+    /* animation-name: pulsedl;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate; */
+  }
+
+  &__note-img-1 {
+    position: absolute;
+    width: 19px;
+    z-index: 20;
+    left: 50px;
+    top: 59px;
+    animation: fadeindl 1s ease both;
+    animation-delay: 1.5s;
+  }
+  &__note-img-2 {
+    position: absolute;
+    width: 19px;
+    z-index: 20;
+    left: 50px;
+    top: 90px;
+    animation: fadeindl 1s ease both;
+    animation-delay: 1.5s;
+  }
+}

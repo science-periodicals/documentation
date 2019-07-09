@@ -1,0 +1,242 @@
+:root {
+  --base-grayscale: 40%;
+}
+.diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__illustration {
+    position: relative;
+    width: 310px;
+    height: 310px;
+    z-index: 10;
+    transform: scale(1.2);
+    margin-bottom: 40px;
+    @media (--small-tablet) {
+      transform: none;
+      margin-bottom: 0;
+    }
+    @media (--mobile) {
+      transform: scale(0.9);
+    }
+  }
+
+  &__figcaption {
+    z-index: 1000; /* set to prevent graphic part to block the hover even on caption */
+  }
+
+  &__user {
+    position: absolute;
+    z-index: 0;
+    top: 70px;
+    left: 0;
+    cursor: pointer;
+  }
+  &__public {
+    position: absolute;
+    left: 177px;
+    top: 195px;
+    z-index: 30;
+    cursor: pointer;
+  }
+  &__reviewer {
+    position: absolute;
+    left: 175px;
+    top: 70px;
+    z-index: 20;
+    cursor: pointer;
+    /* width: 70px;
+    height: 70px; */
+  }
+  &__cube {
+    z-index: 30;
+    position: absolute;
+    opacity: 0.8;
+    left: 100px;
+    top: 115px;
+    animation: fadeinttb 2s ease both;
+    animation-delay: 0s;
+    cursor: pointer;
+  }
+  &__editor {
+    position: absolute;
+    left: 25px;
+    top: 185px;
+    z-index: 30;
+    cursor: pointer;
+  }
+  &__workflow {
+    position: absolute;
+    left: 135px;
+    top: 0;
+    z-index: 30;
+    cursor: pointer;
+  }
+
+  &__section-texts {
+    font: var(--ui-type);
+    color: var(--ui-type__color);
+    letter-spacing: var(--ui-type__letter-spacing);
+    min-height: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--sgrd) var(--sgrd) 0;
+    /* box-sizing: border-box; */
+    text-align: center;
+
+    @media (--up-to-tablet) {
+      min-height: 5.2rem; /* Needed so 2 lines _and_ 3 lines of text can be rendered without pushing things down so that hover / touch is nice and stable */
+      padding-bottom: var(--xsgrd);
+    }
+
+    &--light {
+      color: var(--text-color--light);
+    }
+  }
+
+  &__key {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: var(--sgrd);
+    color: var(--text-color--light);
+    z-index: 20;
+  }
+
+  &__key-icon {
+    margin-right: var(--sgrd);
+    margin-bottom: var(--xsgrd);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.5s;
+
+    &--signature .iconoclass {
+      margin-right: 4px;
+    }
+    &--public {
+      filter: grayscale(100%);
+    }
+    &--active&--public {
+      filter: none;
+    }
+    &--active {
+      color: black;
+    }
+  }
+
+  &__patrons-icon {
+    margin-right: 4px;
+    opacity: 0.8;
+  }
+}
+
+@keyframes fadeinttb {
+  from {
+    opacity: 0;
+    transform: translate(0px, -30px);
+  }
+  to {
+    opacity: 0.9;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes fadeinltr {
+  from {
+    opacity: 0;
+    transform: translate(10px, 5px);
+  }
+  to {
+    opacity: 0.9;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes pulseltr {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(10px, 5px);
+  }
+}
+
+@keyframes fadeinrtl {
+  from {
+    opacity: 0;
+    transform: translate(-10px, -5px);
+  }
+  to {
+    opacity: 0.9;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes pulsertl {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(10px, 5px);
+  }
+}
+
+@keyframes fadeindl {
+  from {
+    opacity: 0;
+    transform: translate(0px, -5px);
+  }
+  to {
+    opacity: 0.9;
+    transform: translate(-10px, 0px);
+  }
+}
+
+@keyframes pulseur {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(10px, -5px);
+  }
+}
+
+@keyframes pulseul {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(-10px, -5px);
+  }
+}
+
+@keyframes pulsedl {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(-10px, 5px);
+  }
+}
+
+@keyframes vbounce {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(0px, -10px);
+  }
+}
+
+@keyframes slowpulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}

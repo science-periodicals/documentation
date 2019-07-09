@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 72 72">
+	<rect fill="#999" width="72" height="72"/>
+	<g fill='#fff' transform='scale(1.4) translate(-102, -10) '>
+		<!-- chevron -->
+		<path d="M282.3,40l-7.4,13H269l10.5-17.4L269.7,19h5.9l6.7,12.2l2.7,4.4L282.3,40z M285,35.6"
+					transform='translate(-135, 0)'/>
+		<!-- X -->
+		<polygon points="113.6,39.5 105.4,53 111.4,53 116.5,44"/>
+		<polygon points="116.5,27.2 112,19 106.1,19 113.7,31.8"/>
+		<polygon points="121.6,35.6 131.5,19 125.5,19 122.8,24 116,35.9 116,35.9 116,35.9 118.7,40.3 126.2,53 132.2,53"/>
+	</g>
+</svg>

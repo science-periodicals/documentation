@@ -1,0 +1,15 @@
+.ds3 .custom-box {
+  background-color: whitesmoke;
+  padding: 12px 32px;
+  margin: var(--lgrd) 0;
+
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    border-bottom: 2px solid white;
+    padding: var(--sgrd) 0;
+    margin-bottom: var(--mgrd);
+  }
+}

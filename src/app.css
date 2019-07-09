@@ -1,0 +1,92 @@
+@import 'normalize.css';
+@import 'highlight.js/styles/github-gist.css';
+@import '@scipe/resources';
+@import '@scipe/iconoclass';
+@import '@scipe/ui';
+
+@import './components/home.css';
+@import './components/get-started-links.css';
+@import './components/splash-page.css';
+@import './components/pricing-page.css';
+@import './components/markup.css';
+@import './components/role-benefits-tabs.css';
+@import './components/legal.css';
+@import './components/feature-page.css';
+@import './components/layers-graphic.css';
+@import './components/documentation.css';
+@import './components/vision-page.css';
+
+@import './components/loading.css';
+
+/* Common component */
+@import './components/jsonld-example.css';
+@import './components/code-example.css';
+@import './components/info.css';
+
+/* DS3 CSS */
+@import './ds3.css';
+@import './components/ds3/custom-box.css';
+@import './components/ds3/ds3-toc.css';
+@import './components/ds3/schema.css';
+@import './components/ds3/sections/file-extension.css';
+@import './components/ds3/sections/sections-and-headings.css';
+
+/* MS3 CSS */
+@import './components/ms3/ms3.css';
+
+/* PDF CSS */
+@import './components/pdf/pdf.css';
+
+/* Publication types and style guide CSS */
+@import './components/publication-types-and-style-guides/publication-types-and-style-guides.css';
+
+/* author and reviewer user guide */
+@import './components/author-and-reviewer-user-guide/author-and-reviewer-user-guide.css';
+
+/* workflows */
+@import './components/workflows/workflows.css';
+
+/* editor user guide */
+@import './components/editor-user-guide/editor-user-guide.css';
+
+/* workflows */
+@import './components/workflows/workflows.css';
+
+/* Archive CSS */
+@import './components/archive/archive.css';
+@import './components/archive/example.css';
+@import './components/archive/processing.css';
+@import './components/archive/structure.css';
+@import './components/archive/manifest.css';
+@import './components/archive/html-example.css';
+
+/* API CSS */
+@import './components/api/api.css';
+
+/* Diagram CSS*/
+@import './components/diagram/diagram.css';
+@import './components/diagram/diagram-user.css';
+@import './components/diagram/diagram-public.css';
+@import './components/diagram/diagram-editor.css';
+@import './components/diagram/diagram-reviewer.css';
+@import './components/diagram/diagram-right-arrow.css';
+@import './components/diagram/diagram-left-arrow.css';
+@import './components/diagram/diagram-down-arrow.css';
+@import './components/diagram/diagram-cube.css';
+@import './components/diagram/diagram-workflow.css';
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+}
+
+@media print {
+  .app-layout {
+    &__middle {
+      padding: 0;
+    }
+  }
+}

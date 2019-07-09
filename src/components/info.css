@@ -1,0 +1,22 @@
+.info {
+  background-color: var(--grey-25);
+  padding: var(--sgrd);
+  margin-bottom: var(--sgrd);
+  border-top: 4px solid var(--grey-100);
+  border-bottom: 4px solid var(--grey-100);
+
+  & header {
+    padding-top: var(--xsgrd);
+    text-transform: uppercase;
+    letter-spacing: 0.07rem;
+    border-bottom: 2px solid white;
+    padding-bottom: var(--xsgrd);
+    margin-bottom: var(--xsgrd);
+    & a,
+    & code {
+      text-transform: none;
+    }
+  }
+
+  /* TODO @halmos style the section header (section headers within the info box) */
+}

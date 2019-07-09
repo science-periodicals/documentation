@@ -1,0 +1,33 @@
+.publication-types-and-style-guides {
+  &__card {
+    margin: var(--sgrd);
+    padding: var(--mgrd);
+  }
+
+  &__card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__card-icon {
+    color: var(--text-color--light);
+  }
+
+  &__title {
+    padding-bottom: 0;
+  }
+
+  &__header {
+    padding: 0 var(--lgrd);
+    padding-top: var(--mgrd);
+    text-align: center;
+
+    & img {
+      padding: var(--mgrd);
+      width: 620px;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+  }
+}

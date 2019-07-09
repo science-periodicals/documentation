@@ -1,0 +1,62 @@
+.diagram-user {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+
+  filter: grayscale(var(--base-grayscale));
+
+  /* make sure mouse events only capture on the component parts */
+  pointer-events: none;
+  & > * {
+    pointer-events: auto;
+  }
+
+  &--active {
+    filter: grayscale(0%);
+  }
+
+  &__docs {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &--active &__docs {
+    animation: pulseul 2s ease-in-out both alternate infinite;
+  }
+  &__cc-img {
+    position: absolute;
+    width: 38px;
+    z-index: 0;
+    animation: fadeinltr 1s ease both;
+    animation-delay: 1s;
+  }
+  &__ms-img {
+    position: absolute;
+    width: 47px;
+    z-index: 10;
+    top: 0px;
+    left: 15px;
+    opacity: 0.9;
+    animation: fadeinltr 1s ease both;
+    animation-delay: 0.5s;
+  }
+  &__author-panel {
+    position: absolute;
+    width: 61px;
+    z-index: 10;
+    left: 30px;
+    top: 4px;
+    opacity: 0.9;
+    animation: fadeinltr 1s ease both;
+    animation-delay: 0s;
+  }
+
+  &__arrow {
+    z-index: 20;
+    position: absolute;
+    left: 48px;
+    top: 50px;
+    animation: fadeinltr 1s ease both;
+    animation-delay: 2s;
+  }
+}

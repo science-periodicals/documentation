@@ -1,0 +1,53 @@
+.markup .render {
+  font-size: 120%;
+  padding: 24px;
+  background-color: rgb(243,244,247);
+}
+.markup .render a{
+   color: rgb(230,0,28);
+}
+a[typeof="schema:InfectiousDisease"] {
+  transition: color 700ms ease;
+}
+.markup .code .color {
+  color: rgb(137,179,121);
+}
+
+.markup .code {
+  font-size: 9px;
+  line-height: 14px;
+  text-align: left;
+  background-color: rgb(51,51,51);
+  overflow: auto;
+  /*margin-left: -24px;*/
+}
+
+.markup .code .loc {
+  color: rgb(79,83,91);
+  display: none;
+}
+.markup .code .tag {
+  color: rgb(189,107,122);
+}
+.markup .code .property {
+  color: rgb(202,136,81);
+}
+.markup .code .value {
+  color: rgb(137,179,121);
+}
+.markup .code {
+  color: rgb(144,157,181);
+}
+/*@media only screen and (min-width: 512px) {
+
+
+}*/
+@media only screen and (min-width: 512px) {
+  .markup .code {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .markup .code .loc {
+    display:inline;
+  }
+}

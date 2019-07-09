@@ -1,0 +1,76 @@
+.diagram-reviewer {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+
+  filter: grayscale(var(--base-grayscale));
+  transition: filter 0.5s;
+
+  /* make sure mouse events only capture on the component parts */
+  pointer-events: none;
+  & > * {
+    pointer-events: auto;
+  }
+
+  &--active {
+    filter: grayscale(0%);
+  }
+
+  &__arrow {
+    z-index: 60;
+    position: absolute;
+    left: 20px;
+    top: 50px;
+    animation: fadeindl 1s ease both;
+    animation-delay: 2s;
+  }
+
+  &__docs {
+    position: absolite;
+    top: 0;
+    left: 0;
+  }
+
+  &--active &__docs {
+    animation: pulseur 2s ease both infinite alternate;
+  }
+
+  &__panel {
+    width: 61px;
+    position: absolute;
+    z-index: 50;
+    animation: fadeindl 1s ease both;
+    animation-delay: 0s;
+    left: 70px;
+    top: 0px;
+  }
+  &__ms-img {
+    position: absolute;
+    width: 47px;
+    z-index: 20;
+    top: 0px;
+    left: 95px;
+    opacity: 0.9;
+    animation: fadeindl 1s ease both;
+    animation-delay: 1s;
+  }
+
+  &__note-img-1 {
+    position: absolute;
+    width: 19px;
+    z-index: 20;
+    left: 75px;
+    top: 10px;
+    animation: fadeindl 1s ease both;
+    animation-delay: 1.5s;
+  }
+  &__note-img-2 {
+    position: absolute;
+    width: 19px;
+    z-index: 20;
+    left: 75px;
+    top: 35px;
+    animation: fadeindl 1s ease both;
+    animation-delay: 1.5s;
+  }
+}

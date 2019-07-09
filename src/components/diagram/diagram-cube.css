@@ -1,0 +1,94 @@
+.diagram-cube {
+  filter: grayscale(var(--base-grayscale));
+
+  transition: filter 0.5s;
+
+  /* make sure mouse events only capture on the component parts */
+  cursor: pointer;
+  pointer-events: none;
+  & > * {
+    pointer-events: auto;
+  }
+
+  &--active {
+    filter: grayscale(0%);
+  }
+
+  &__shadow-img {
+    width: 122px;
+    position: absolute;
+    top: 120px;
+    filter: blur(20px);
+    animation: shadow 1s ease both;
+  }
+  &__bg-img {
+    width: 123px;
+    position: absolute;
+  }
+  &__frame-img {
+    width: 123px;
+    position: absolute;
+  }
+
+  &__gd-img {
+    width: 123px;
+    position: absolute;
+    opacity: 0.2;
+    transition: opacity 1s;
+    /* animation: gdfadeinltr 1s ease both; */
+  }
+  &--active &__gd-img {
+    animation: gdsequence 1.5s ease both infinite alternate;
+    &--1 {
+      animation-delay: 0s;
+    }
+    &--2 {
+      animation-delay: 0.5s;
+    }
+    &--3 {
+      animation-delay: 1s;
+    }
+    &--4 {
+      animation-delay: 1.5s;
+    }
+    &--5 {
+      animation-delay: 2s;
+    }
+  }
+}
+
+@keyframes gdfadeinltr {
+  0% {
+    opacity: 0;
+    transform: translate(0px, -20px);
+  }
+  70% {
+    opacity: 0.8;
+    transform: translate(0px, 0px);
+  }
+
+  100% {
+    opacity: 0.3;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes gdsequence {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
+@keyframes shadow {
+  from {
+    opacity: 0;
+    transform: translate(0px, 20px);
+  }
+  to {
+    opacity: 0.15;
+    transform: translate(0px, 0px);
+  }
+}

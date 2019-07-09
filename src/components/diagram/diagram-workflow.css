@@ -1,0 +1,38 @@
+.diagram-workflow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: grayscale(var(--base-grayscale));
+
+  &--active {
+    filter: none;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    animation: fadeinttb 2s ease both 1;
+    animation-delay: 1.5s;
+  }
+
+  &__docs {
+    animation: fadeinttb 2s ease both 1;
+    animation-delay: 1s;
+  }
+  &__workflow-img {
+    width: 52px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &--active &__workflow-img {
+    animation-name: vbounce;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+  }
+}

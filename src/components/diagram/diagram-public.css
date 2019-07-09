@@ -1,0 +1,59 @@
+.diagram-public {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  filter: grayscale(var(--base-grayscale));
+
+  &--active {
+    filter: grayscale(0%);
+  }
+
+  &__arrow {
+    z-index: 0;
+    position: absolute;
+    left: 0px;
+    top: 2px;
+    animation: fadeinrtl 1s ease both;
+    animation-delay: 2s;
+  }
+
+  &__docs {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &--active &__docs {
+    animation: pulsertl 2s ease both infinite alternate;
+  }
+
+  &__data-img {
+    position: absolute;
+    width: 47px;
+    z-index: 10;
+    left: 70px;
+    opacity: 0.9;
+    animation: fadeinrtl 1s ease both;
+    animation-delay: 0.5s;
+  }
+
+  &__ms-img {
+    position: absolute;
+    width: 47px;
+    z-index: 20;
+    top: 10px;
+    left: 85px;
+    opacity: 0.9;
+    animation: fadeinrtl 1s ease both;
+    animation-delay: 1s;
+  }
+
+  &__patron-img {
+    position: absolute;
+    width: 23px;
+    z-index: 30;
+    top: 20px;
+    left: 120px;
+    animation: fadeinrtl 1s ease both;
+    animation-delay: 2s;
+  }
+}

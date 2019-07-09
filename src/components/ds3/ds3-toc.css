@@ -1,0 +1,36 @@
+.ds3.ds3-toc ul li,
+.ds3.ds3-toc ul ul li,
+.ds3.ds3-toc ul ul ul li {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.ds3.ds3-toc {
+  & :any-link {
+    color: var(--text-color);
+  }
+
+  & a:hover {
+    color: var(--accent-color);
+  }
+
+  & ul {
+    margin: var(--sgrd) 0;
+  }
+  & ul > li {
+    /*list-style: none;*/
+
+    & ul > li {
+      /*list-style: initial;*/
+    }
+  }
+}
+.ds3.ds3-toc a.active {
+  color: var(--accent-color--light);
+}
+
+@media print {
+  .ds3.ds3-toc {
+    display: none;
+  }
+}

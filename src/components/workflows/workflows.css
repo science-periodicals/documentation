@@ -1,0 +1,38 @@
+.workflows {
+  &__header {
+    padding: 0 var(--lgrd);
+    padding-top: var(--mgrd);
+    text-align: center;
+
+    & img {
+      padding: var(--mgrd);
+      width: 620px;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+  }
+  & .blinding-example {
+    padding: var(--xsgrd);
+
+    &__caption {
+      padding: var(--sgrd);
+      color: var(--text-color--light);
+      border-bottom: 1px solid var(--ruling-color);
+    }
+  }
+  & .workflow-example {
+    padding: var(--sgrd);
+    &__caption {
+      padding: var(--sgrd);
+      color: var(--text-color--light);
+      border-bottom: 1px solid var(--ruling-color);
+    }
+  }
+  &__icon {
+    color: var(--text-color--light);
+    vertical-align: bottom;
+  }
+  & li > aside {
+    text-indent: 0ch;
+  }
+}

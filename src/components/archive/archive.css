@@ -1,0 +1,124 @@
+.archive {
+  &__markup {
+    margin-top: var(--lgrd);
+  }
+}
+.archive_old {
+  padding: var(--xlgrd) 0;
+
+  & ul {
+    margin-top: 0;
+  }
+
+  & code {
+    font: var(--mono-type);
+    letter-spacing: var(--mono-type__letter-spacing);
+  }
+
+  &__header {
+    padding: 0 var(--lgrd);
+    padding-top: var(--mgrd);
+    text-align: center;
+
+    & img {
+      padding: var(--mgrd);
+      width: 620px;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  &__intro {
+    padding: 0 var(--lgrd);
+  }
+
+  &__default-ui-type--subhead-4 {
+    font: var(--ui-type);
+    color: var(--ui-type__color);
+    letter-spacing: var(--ui-type__letter-spacing);
+  }
+
+  &__default-ui-type--caption {
+    padding: var(--sgrd);
+    background-color: var(--grey-50);
+  }
+
+  &__default-ui-type--subhead-2 {
+    padding: var(--sgrd) 0;
+  }
+
+  &__default-ui-type--subhead-3 {
+    padding: var(--xsgrd) 0;
+  }
+
+  /* &__term-list {
+  }
+  &__term-word {
+  }
+  &__term-def {
+    margin-left: 0;
+    margin-bottom: var(--xsgrd);
+  } */
+
+  &__figure {
+    margin: var(--sgrd) 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__term-table-scroll-container {
+    overflow-x: auto;
+    border-left: 1px solid var(--ruling-color);
+    border-right: 1px solid var(--ruling-color);
+    margin: var(--mgrd) auto;
+  }
+
+  &__term-table {
+    border-collapse: collapse;
+
+    background-color: white;
+    width: 100%;
+  }
+
+  &__term-table-header-cell {
+    font-weight: 500;
+    padding: var(--xsgrd) var(--sgrd);
+    border-top: 2px solid var(--ruling-color);
+    border-bottom: 2px solid var(--ruling-color);
+    text-align: left;
+  }
+
+  &__term-table-cell {
+    padding: var(--xsgrd) var(--sgrd);
+    border-bottom: 1px solid var(--ruling-color--minor);
+  }
+
+  &__term-table-caption {
+    border-top: 1px solid var(--ruling-color);
+    border-bottom: 1px solid var(--ruling-color);
+    padding: var(--sgrd);
+    caption-side: bottom;
+    color: var(--text-color--light);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .archive {
+    &__header {
+      & img {
+        width: 420px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .archive {
+    &__header {
+      & img {
+        width: 220px;
+      }
+    }
+  }
+}

@@ -1,0 +1,195 @@
+.layers-graphic {
+  margin: var(--mgrd) 0;
+  position: relative;
+  max-width: 1280px;
+  /* padding % is relative to element width. this will force a specific aspect ratio */
+  padding-bottom: 45%;
+  pointer-events: none;
+
+  @media (--tablet) {
+    /* on mobile device, we hide the layer graphic and show icons instead */
+    height: auto;
+    margin: 32px auto;
+    padding-bottom: 0;
+  }
+
+  &__link {
+    pointer-events: auto;
+    cursor: pointer;
+    color: var(--text-color);
+
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
+  &__layer {
+    position: absolute;
+    align-items: top;
+    transition: margin-top 3s ease-in-out;
+    width: 100%;
+    pointer-events: none;
+
+    @media (--tablet) {
+      position: relative;
+      margin-top: var(--mgrd) !important;
+    }
+
+    &__text {
+      position: absolute;
+      top: 3%;
+      left: 50%;
+      width: 50%;
+      max-width: 375px;
+      padding: 0 16px 0 24px;
+      text-align: left;
+      color: var(--color_text_grey);
+      box-sizing: border-box;
+      z-index: 10;
+
+      @media screen and (max-width: 900px) {
+        border-bottom: 1px solid gray(0, 15%);
+        padding: 0.5em;
+        width: 60%;
+        left: 40%;
+        text-align: right;
+      }
+
+      @media (--tablet) {
+        position: relative;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 12px !important;
+        left: auto;
+        right: auto;
+        text-align: center;
+        border: 0;
+      }
+    }
+
+    &__image {
+      margin-right: 50%;
+
+      @media screen and (max-width: 900px) {
+        /* margin-right: auto; */
+      }
+
+      @media (--tablet) {
+        display: none;
+      }
+    }
+
+    &__icon {
+      display: none;
+
+      @media (--tablet) {
+        display: block;
+        width: 32px;
+        height: 32px;
+        margin: 0 auto;
+      }
+    }
+
+    &__title {
+      display: block;
+      transition: color 1s;
+      font: var(--ui-type--subhead-2);
+      letter-spacing: var(--ui-type--subhead-2__letter-spacing);
+
+      /* link @media screen and (max-width: 900px) {
+        font-size: 16px;
+        line-height: 20px;
+      } */
+      /*@media screen and (max-width: 480px) {
+        font-size: 13px;
+        line-height: 18px;
+      }*/
+    }
+
+    &__sub-title {
+      opacity: 0;
+      transition: opacity 2s 0s;
+      font: var(--ui-type--short);
+      color: var(--text-color--light);
+      letter-spacing: var(--ui-type--short__letter-spacing);
+      line-height: 1.25em;
+
+      /* @media screen and (max-width: 900px) {
+        font-size: 13px;
+        line-height: 17px;
+        display: none;
+      } */
+
+      @media (--tablet) {
+        display: block;
+      }
+    }
+
+    /* layer-specific styles */
+
+    /* Apps */
+    &--apps {
+      z-index: 5;
+      margin-top: 8%;
+      transition-delay: 0.5s;
+    }
+    &--apps &__text {
+      margin-top: 7%;
+    }
+
+    /* services */
+    &--services {
+      z-index: 4;
+      margin-top: 6%;
+      top: 15%;
+      transition-delay: 1s;
+    }
+    &--services &__text {
+      margin-top: 8%;
+    }
+
+    /* foundations */
+    &--foundations {
+      z-index: 3;
+      margin-top: 4%;
+      top: 30%;
+      transition-delay: 1.5s;
+    }
+    &--foundations &__text {
+      margin-top: 9%;
+    }
+
+    /* shadow */
+    &--shadow {
+      z-index: 2;
+      margin-top: 0px;
+      top: 45%;
+      transition-delay: 1.5s;
+    }
+  }
+}
+
+/* start animation when scrolled into view */
+.scroll-highlight--active .layers-graphic {
+  &__layer {
+    /*animation-play-state: running;*/
+    margin-top: 0;
+
+    &__title:not(:hover) {
+      color: var(--text-color);
+    }
+    &__sub-title {
+      opacity: 1;
+      transition: opacity 2s 2s;
+    }
+  }
+}
+
+@keyframes float {
+  0% {
+    margin-top: 50px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}

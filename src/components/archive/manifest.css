@@ -1,0 +1,20 @@
+.manifest {
+  border-top: 1px solid var(--ruling-color--major);
+  padding: var(--lgrd);
+
+  &__default-ui-type--subhead-1 {
+    padding-bottom: var(--mgrd);
+  }
+
+  &__section {
+    padding: var(--mgrd) 0;
+    margin: var(--sgrd) 0;
+    border-top: 1px solid var(--ruling-color--major);
+
+    &--encodings {
+    }
+  }
+
+  &__sub-section {
+  }
+}

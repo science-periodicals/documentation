@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <% if (locals.helmet) { %>
+      <%- helmet.title.toString() %>
+      <%- helmet.meta.toString() %>
+      <%- helmet.link.toString() %>
+      <%- helmet.style.toString() %>
+    <% } else { %>
+      <title>Get started • sci.pe</title>
+    <% } %>
+
+    <link rel="icon" sizes='16x16' href="/favicon/alt-submark-favicon/favicon-16x16.png">
+    <link rel="icon" sizes='32x32' href="/favicon/alt-submark-favicon/favicon-32x32.png">
+
+    <%
+    if (locals.bundles) {
+      Object.keys(locals.bundles).forEach(function(name) {
+        if (name && locals.bundles[name] && locals.bundles[name].css) {
+    %>
+      <link rel="stylesheet" href="/assets/<%-locals.bundles[name].css %>" />
+    <% }})} %>
+
+    <% if (locals.initialState) { %>
+      <script>
+       window.__CONFIG__ = <%- locals.escJSON({
+                             ssr: locals.ssr,
+                             error: locals.error,
+                           }) %>;
+       window.__INITIAL_STATE__ = <%- locals.escJSON(locals.initialState) %>
+      </script>
+    <% } %>
+
+    <%
+    if (locals.bundles && !locals.ssrOnly) {
+      Object.keys(locals.bundles).forEach(function(name) {
+        if (name && !locals.bundles[name].prefetch) {
+    %>
+      <script src="/assets/<%- locals.bundles[name].js %>"></script>
+    <%
+    }})}
+    %>
+
+    <%
+    if (locals.bundles && !locals.ssrOnly) {
+      Object.keys(locals.bundles).forEach(function(name) {
+        if (name && locals.bundles[name] && locals.bundles[name].prefetch) {
+    %>
+      <link rel="prefetch" href="/assets/<%- locals.bundles[name].js %>" />
+    <%
+    }})}
+    %>
+
+    <%
+    if (locals.prefetchManifest) {
+      Object.keys(locals.prefetchManifest).forEach(function(name) {
+        if (name && locals.prefetchManifest[name]) {
+    %>
+      <link rel="prefetch" href="/assets/<%- locals.prefetchManifest[name].js %>" />
+    <%
+    }})}
+    %>
+  </head>
+
+  <body>
+    <div id="app"><%- locals.html %></div>
+
+    <script>
+    window.intercomSettings = {
+  app_id: 'ysede4wn'
+};
+</script>
+    <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/ysede4wn';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+  </body>
+</html>

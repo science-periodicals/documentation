@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="258px" height="496px" viewBox="0 0 258 496" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>vision-sci.pe-core-chart</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(0.000000, 2.000000)">
+            <path d="M233.5098,259 L27.0648,259 C13.8438,259 3.0278,248.184 3.0278,234.963 L3.0278,125 C3.0278,56.25 59.2778,0 128.0278,0 L130.9748,0 C199.7248,0 255.9748,56.25 255.9748,125 L255.9748,236.535 C255.9748,248.891 245.8648,259 233.5098,259" id="Fill-1" fill="#F2F2F2"></path>
+            <path d="M232.0069,124.5 C232.0069,181.109 186.1159,227 129.5069,227 C72.8979,227 27.0069,181.109 27.0069,124.5 C27.0069,67.891 72.8979,22 129.5069,22 C186.1159,22 232.0069,67.891 232.0069,124.5" id="Fill-3" fill="#E6E6E6"></path>
+            <text id="Submission" font-family="Roboto-Regular, Roboto" font-size="13" font-weight="normal" fill="#333333">
+                <tspan x="96.0654297" y="62">Submission</tspan>
+            </text>
+            <text id="Peer-review" font-family="Roboto-Regular, Roboto" font-size="13" font-weight="normal" fill="#333333">
+                <tspan x="97.0065918" y="81">Peer review</tspan>
+            </text>
+            <text id="Content-management" font-family="Roboto-Regular, Roboto" font-size="13" font-weight="normal" fill="#333333">
+                <tspan x="67.2946777" y="100">Content management</tspan>
+            </text>
+            <text id="SCI.PE-CORE" font-family="Roboto-Bold, Roboto" font-size="13" font-weight="bold" fill="#000000">
+                <tspan x="92.4553223" y="122">SCI.PE CORE</tspan>
+            </text>
+            <text id="Document-transformation" font-family="Roboto-Regular, Roboto" font-size="13" font-weight="normal" fill="#333333">
+                <tspan x="55.3991699" y="143">Document transformation</tspan>
+            </text>
+            <text id="Payments" font-family="Roboto-Regular, Roboto" font-size="13" font-weight="normal" fill="#333333">
+                <tspan x="101.086426" y="162">Payments</tspan>
+            </text>
+            <text id="Hosting" font-family="Roboto-Regular, Roboto" font-size="13" font-weight="normal" fill="#333333">
+                <tspan x="107.373779" y="181">Hosting</tspan>
+            </text>
+            <text id="SEO" font-family="Roboto-Regular, Roboto" font-size="13" font-weight="normal" fill="#333333">
+                <tspan x="118.480713" y="200">SEO</tspan>
+            </text>
+            <text id="UI-/-API" font-family="Roboto-Bold, Roboto" font-size="12.87" font-weight="bold" fill="#000000">
+                <tspan x="108.423677" y="247">UI / API</tspan>
+            </text>
+            <g id="Group-10" transform="translate(0.000000, 228.000000)">
+                <path d="M234.479609,34.7145695 L218.567276,34.7145695 L218.567276,17.3847531 C218.567276,8.34163515 211.161956,0.943935094 202.11181,0.943935094 C193.060635,0.943935094 185.656344,8.34163515 185.656344,17.3847531 L185.656344,34.7145695 L79.6982463,34.7145695 L79.6982463,17.3847531 C79.6982463,8.34163515 72.2929267,0.943935094 63.2427806,0.943935094 C54.1916059,0.943935094 46.787315,8.34163515 46.787315,17.3847531 L46.787315,34.7145695 L23.599273,34.7145695 C10.8901852,34.7145695 0.490437862,45.1040318 0.490437862,57.8028345 L0.490437862,140.203223 C0.490437862,210.860611 58.3525335,268.671202 129.072873,268.671202 L130.623062,268.671202 C201.343401,268.671202 259.205497,210.860611 259.205497,140.203223 L259.205497,59.4184478 C259.205497,45.8306467 248.079516,34.7145695 234.479609,34.7145695" id="Fill-6" fill="#F2F2F2"></path>
+                <path d="M234.479609,34.7145695 L218.567276,34.7145695 L218.567276,17.3847531 C218.567276,8.34163515 211.161956,0.943935094 202.11181,0.943935094 C193.060635,0.943935094 185.656344,8.34163515 185.656344,17.3847531 L185.656344,34.7145695 L79.6982463,34.7145695 L79.6982463,17.3847531 C79.6982463,8.34163515 72.2929267,0.943935094 63.2427806,0.943935094 C54.1916059,0.943935094 46.787315,8.34163515 46.787315,17.3847531 L46.787315,34.7145695 L23.599273,34.7145695 C10.8901852,34.7145695 0.490437862,45.1040318 0.490437862,57.8028345 L0.490437862,140.203223 C0.490437862,210.860611 58.3525335,268.671202 129.072873,268.671202 L130.623062,268.671202 C201.343401,268.671202 259.205497,210.860611 259.205497,140.203223 L259.205497,59.4184478 C259.205497,45.8306467 248.079516,34.7145695 234.479609,34.7145695 Z" id="Stroke-8" stroke="#FFFFFF" stroke-width="6"></path>
+            </g>
+            <text id="ONE-CLICK-ADD-ONS" font-family="Roboto-Medium, Roboto" font-size="13" font-weight="400" fill="#333333">
+                <tspan x="67.0581055" y="303">ONE-CLICK ADD-ONS</tspan>
+            </text>
+            <text id="DOI-registration-with-crossref" font-family="Roboto-Regular, Roboto" font-size="13" font-weight="normal" fill="#333333">
+                <tspan x="45.0253906" y="329">DOI registration with crossref</tspan>
+            </text>
+            <text id="Archiving-with-Internet-Archive" font-family="Roboto-Regular, Roboto" font-size="13" font-weight="normal" fill="#333333">
+                <tspan x="41.1833496" y="349">Archiving with Internet Archive</tspan>
+            </text>
+            <text id="Archiving-with-CLOCKSS" font-family="Roboto-Regular, Roboto" font-size="13" font-weight="normal" fill="#333333">
+                <tspan x="58.442627" y="369">Archiving with CLOCKSS</tspan>
+            </text>
+            <text id="Archiving-with-Portico" font-family="Roboto-Regular, Roboto" font-size="13" font-weight="normal" fill="#333333">
+                <tspan x="66.3408203" y="388">Archiving with Portico</tspan>
+            </text>
+            <text id="iThenticate-plagiarism-detection-" font-family="Roboto-Regular, Roboto" font-size="13" font-weight="normal" fill="#333333">
+                <tspan x="36.0925293" y="408">iThenticate plagiarism detection </tspan>
+            </text>
+            <text id="Translation-with-AJE" font-family="Roboto-Regular, Roboto" font-size="13" font-weight="normal" fill="#333333">
+                <tspan x="69.4367676" y="428">Translation with AJE</tspan>
+            </text>
+            <text id="And-more..." font-family="Roboto-Regular, Roboto" font-size="13" font-weight="normal" fill="#333333">
+                <tspan x="96.2192383" y="448">And more...</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

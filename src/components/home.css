@@ -1,0 +1,60 @@
+.home {
+  background-color: var(--panel-bg-color);
+  &__toc {
+    padding: var(--mgrd) var(--mgrd) 5.6rem var(--mgrd);
+    box-sizing: border-box;
+    height: 100%;
+    overflow-y: auto;
+  }
+  &__body {
+    padding: var(--lgrd) var(--sgrd);
+    min-height: 300px;
+    max-width: 98rem;
+    /*margin: 0 auto;*/
+    /*background-color: green;*/
+    @media (--small-tablet) {
+      padding: var(--mgrd) 0;
+    }
+  }
+
+  /* TODO this should be done upstream in UI */
+  & .header__responsive-child-item {
+    flex-grow: 0;
+  }
+  /* TODO this should be done upstream in UI */
+  & .header__responsive-menu {
+    flex-grow: 0;
+    padding-left: var(--xsgrd);
+  }
+
+  & .header a {
+    text-transform: uppercase;
+  }
+
+  /* this appears in right margin on desktop but is hidden */
+  &__right {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow-y: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    padding-top: var(--sgrd);
+    padding-bottom: var(--footer-height);
+    & > * {
+      margin: var(--sgrd);
+    }
+  }
+}
+
+@media print {
+  .home {
+    &__body {
+      padding: 0;
+    }
+    & .card {
+      &__border {
+        border: none;
+      }
+    }
+  }
+}

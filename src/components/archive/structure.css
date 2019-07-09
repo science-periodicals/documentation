@@ -1,0 +1,13 @@
+.structure {
+  padding: var(--lgrd);
+
+  &__list {
+    margin-left: 0;
+    padding-left: 2ch;
+    margin-top: 0;
+  }
+
+  &__list-item {
+    padding: var(--xsgrd) 0;
+  }
+}
