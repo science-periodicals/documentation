@@ -70,6 +70,6 @@ In most cases the html tags can be mapped to classes as follows:
 
 ## License
 
-`@scipe/workers` is dual-licensed under commercial and open source licenses
+`@scipe/documentation` is dual-licensed under commercial and open source licenses
 ([AGPLv3](https://www.gnu.org/licenses/agpl-3.0.en.html)) based on the intended
 use case. Contact us to learn which license applies to your use case.
