@@ -52,11 +52,23 @@ export const defaultConfig = {
     level: 'info'
   },
 
+  // Session (cookies)
+  sessionSecret: process.env.SESSION_SECRET || 'secret',
+
   // Stripe (payment & invoice)
   stripeKey: process.env.STRIPE_KEY,
   stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
   stripeSaWebhookSecret: process.env.STRIPE_SA_WEBHOOK_SECRET,
   stripeConnectWebhookSecret: process.env.STRIPE_CONNECT_WEBHOOK_SECRET,
+
+  // Crossref (DOIs)
+  crossrefDoiRegistrationUrl:
+    process.env.CROSSREF_DOI_REGISTRATION_URL ||
+    'https://test.crossref.org/servlet/deposit', // see https://support.crossref.org/hc/en-us/articles/214960123-Using-HTTPS-to-POST-Files
+  crossrefDoiRegistrationUsername:
+    process.env.CROSSREF_DOI_REGISTRATION_USERNAME || 'username',
+  crossrefDoiRegistrationPassword:
+    process.env.CROSSREF_DOI_REGISTRATION_PASSWORD || 'password',
 
   // Registration
   openRegistration: false
