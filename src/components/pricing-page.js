@@ -31,8 +31,9 @@ export default class PricingPage extends React.Component {
             <TextLogo /> is available on the cloud (
             <a href="#explorer">explorer</a> and <a href="#voyager">voyager</a>{' '}
             plans) or as a software package that can be deployed to your own
-            servers, AWS, Azure, or GCP (<a href="#endeavour">endeavour</a>{' '}
-            plan).
+            servers, <abbr title="Amazon Web Services">AWS</abbr>, Azure, or{' '}
+            <abbr title="Google Cloud Platform">GCP</abbr> (
+            <a href="#endeavour">endeavour</a> plan).
           </p>
           <p className="pricing-page__body-text">
             Journals on <TextLogo /> set their own business models with custom{' '}
@@ -173,14 +174,14 @@ export default class PricingPage extends React.Component {
 
         <section className="pricing-page__professional-services">
           <h2 className="pricing-page__professional-services__title">
-            Professional Services
+            Professional Services & Support
           </h2>
           <div className="pricing-page__professional-services__body">
             <p className="pricing-page__professional-services__body-intro">
-              <TextLogo /> offers professional services to customers wanting to
-              easily migrate existing journals, create unique user experiences,
-              develop a journal brand, or benefit from additional editorial and
-              production staff support.
+              <TextLogo /> offers professional services and support to customers
+              wanting to easily migrate existing journals, create unique user
+              experiences, develop a journal brand, or benefit from additional
+              editorial and production staff support.
             </p>
 
             <h4 className="pricing-page__professional-services__sub-title">
@@ -193,6 +194,7 @@ export default class PricingPage extends React.Component {
               <li>Editorial workflow design</li>
               <li>Dedicated editorial office and/or production team</li>
               <li>Journal migration (content, data and settings)</li>
+              <li>Dedicated support</li>
             </ul>
             <div className="pricing-page__contact-row">
               <PaperButtonLink href="mailto:contact@sci.pe">
@@ -224,9 +226,10 @@ export default class PricingPage extends React.Component {
             portion) can be paid for by the authors or the journal.
           </Footnote>
           <Footnote mark="3">
-            A commercial license is required if the software is used to charge{' '}
-            <abbr title="Article Processing Charge">APC</abbr>s or sell author
-            services.
+            A commercial license is required if the software is used for
+            commercial purposes or non open access journals.{' '}
+            <a href="mailto:contact@sci.pe">Contact us</a> to learn which
+            license applies to your use case.
           </Footnote>
         </div>
       </div>

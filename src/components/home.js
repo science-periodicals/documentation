@@ -219,6 +219,11 @@ class Home extends React.Component {
                 onClickHamburger={this.handleHamburgerClick}
               >
                 <ResponsiveHeaderItem>
+                  <Link className="header-item-link" to="/get-started/vision">
+                    Vision
+                  </Link>
+                </ResponsiveHeaderItem>
+                <ResponsiveHeaderItem>
                   <Link className="header-item-link" to="/get-started/features">
                     Features
                   </Link>
@@ -226,11 +231,6 @@ class Home extends React.Component {
                 <ResponsiveHeaderItem>
                   <Link className="header-item-link" to="/get-started/pricing">
                     Pricing
-                  </Link>
-                </ResponsiveHeaderItem>
-                <ResponsiveHeaderItem>
-                  <Link className="header-item-link" to="/get-started/vision">
-                    Vision
                   </Link>
                 </ResponsiveHeaderItem>
                 <ResponsiveHeaderItem>

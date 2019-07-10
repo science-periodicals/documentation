@@ -1,5 +1,6 @@
 import React from 'react';
 import { BemTags, TextLogo } from '@scipe/ui';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import CodeExample from '../code-example';
 import InstallPackageTable from './install-package-table';
@@ -80,6 +81,23 @@ export default class Install extends React.Component {
 
           <InstallPackageTable />
 
+          <p className={bem`@__warning`}>
+            While <TextLogo /> is in testing phase, access to{' '}
+            <code>@scipe</code> NPM packages requires a read access token.{' '}
+            <a href="mailto:contact@sci.pe">Contact us</a> to get one.
+          </p>
+
+          <p className={bem`@__warning`}>
+            <TextLogo /> source code is availabe as part of <TextLogo />{' '}
+            <Link to="/get-started/pricing#endeavour">Endeavour</Link> plan and
+            made available under a dual license ({' '}
+            <a href="http://www.gnu.org/licenses/agpl-3.0.html">
+              GNU AGPL v3.0
+            </a>{' '}
+            and commercial). <a href="mailto:contact@sci.pe">Contact us</a> to
+            learn which license applies to your use case.
+          </p>
+
           <p>
             The web application is built through a series of{' '}
             <a href="https://expressjs.com/express">express</a> middlewares and
@@ -102,8 +120,8 @@ export default class Install extends React.Component {
           <p>
             <TextLogo /> can be configured to store blobs in{' '}
             <a href="https://aws.amazon.com/s3/">S3</a> or the filesystem.
-            Additional blob storage backend can added by contributing to the{' '}
-            <a href="https://github.com/scienceai/blob-store">
+            Additional blob storage backend can added by opening issues to the{' '}
+            <a href="https://github.com/science-periodicals/blob-store">
               <code>@scipe/blob-store</code>
             </a>{' '}
             repository.
@@ -173,10 +191,13 @@ export default class Install extends React.Component {
                 <li>
                   <p>
                     Clone the design document repositories (
-                    <a href="https://github.com/scienceai/ddoc-auth">
+                    <a href="https://github.com/science-periodicals/ddoc-auth">
                       scipe/ddoc-auth
                     </a>
-                    , <a href="https://github.com/scienceai/ddoc">scipe/ddoc</a>
+                    ,{' '}
+                    <a href="https://github.com/science-periodicals/ddoc">
+                      scipe/ddoc
+                    </a>
                     )
                   </p>
                   <CodeExample
@@ -217,7 +238,7 @@ export default class Install extends React.Component {
                 <li>
                   <p>
                     Install the{' '}
-                    <a href="https://github.com/scienceai/librarian">
+                    <a href="https://github.com/science-periodicals/librarian">
                       <code>librarian</code> CLI
                     </a>
                     :
@@ -287,7 +308,7 @@ export default class Install extends React.Component {
             <li>
               <p>
                 Install the{' '}
-                <a href="https://github.com/scienceai/ontologist">
+                <a href="https://github.com/science-periodicals/ontologist">
                   <code>ontologist</code> CLI
                 </a>
                 :
@@ -331,7 +352,7 @@ export default class Install extends React.Component {
             <CodeExample
               language="shell"
               code={
-                'npm install @scipe/resources @scipe/librarian @scipe/documentation @scipe/api @scipe/app-suite @scipe/create-error @scipe/bunyan-express-logger'
+                'npm install @scipe/resources @scipe/librarian @scipe/documentation @scipe/api @scipe/app-suite @scipe/create-error @scipe/express-logger'
               }
             />
           </section>
@@ -416,7 +437,7 @@ export default class Install extends React.Component {
               <a href="http://www.graphicsmagick.org/">graphicsmagick</a> and{' '}
               <a href="https://ffmpeg.org/">ffmpeg</a>). Consult the workers
               repo{' '}
-              <a href="https://github.com/scienceai/workers#installation">
+              <a href="https://github.com/science-periodicals/workers#installation">
                 README
               </a>{' '}
               for specific information regarding each worker binary

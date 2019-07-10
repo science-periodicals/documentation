@@ -5,9 +5,8 @@ import createError from '@scipe/create-error';
 import {
   createExpressLoggerMiddleware,
   createExpressErrorLoggerMiddleware
-} from '@scipe/bunyan-express-logger';
+} from '@scipe/express-logger';
 import resources from '@scipe/resources';
-import { overview, assets as overviewAssets } from '@scipe/overview';
 import {
   documentation,
   assets as documentationAssets
@@ -28,7 +27,6 @@ export const sessionMiddleware = createSessionMiddleware(config);
 
 // static assets
 app.use(resources(config));
-app.use(overviewAssets(config));
 app.use(appSuiteAssets(config));
 app.use(apiAssets(config));
 app.use(documentationAssets(config));
