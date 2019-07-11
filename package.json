@@ -101,7 +101,7 @@
     "@scipe/jsonld": "^1.0.0",
     "@scipe/ontology": "^23.0.0",
     "@scipe/resources": "^1.0.0",
-    "@scipe/ui": "^1.0.1",
+    "@scipe/ui": "^1.0.2",
     "classnames": "^2.2.6",
     "d3": "^3.5.17",
     "decamelize": "^1.2.0",
