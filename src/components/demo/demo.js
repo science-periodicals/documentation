@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet-async';
 import DocumentationLicense from '../license.js';
 import DemoTabs from './demo-tabs';
-// import VideoPlayer from '../video-player';
+import VideoPlayer from '../video-player';
 
 export default class Demo extends React.PureComponent {
   static propTypes = {
@@ -55,8 +55,13 @@ export default class Demo extends React.PureComponent {
           <DemoTabs />
         </header>
 
-        {/* Note: right now video says science.ai all over, so need to redo */}
-        {/*<VideoPlayer />*/}
+        <section id="introduction" className={bem`@__section`}>
+          <h2 className={bem`@__default-ui-type--headline`}>Video</h2>
+          {/* Note: right now video says science.ai all over, so need to redo */}
+          <VideoPlayer />
+        </section>
+
+        <DocumentationLicense />
       </article>
     );
   }

@@ -1,5 +1,12 @@
 import React from 'react';
-import { bemify, Tabs, TabsItem, PaperButton } from '@scipe/ui';
+import {
+  bemify,
+  Tabs,
+  TabsItem,
+  PaperButton,
+  ButtonMenu,
+  MenuItem
+} from '@scipe/ui';
 import Iconoclass from '@scipe/iconoclass';
 
 export default class DemoTabs extends React.PureComponent {
@@ -17,8 +24,8 @@ export default class DemoTabs extends React.PureComponent {
               <h3 className={bem`__item-title`}>Configure</h3>
 
               <p className={bem`__text`}>
-                Organizat your staff, setup editorial workflows, publication
-                type and journal styles.
+                Organize your staff, setup editorial workflows, publication type
+                and journal styles.
               </p>
 
               <PaperButton raised={true} capsule={true}>
@@ -51,9 +58,18 @@ export default class DemoTabs extends React.PureComponent {
                 decision.
               </p>
 
-              <PaperButton raised={true} capsule={true}>
+              <ButtonMenu raised={true} capsule={true}>
                 Launch demo
-              </PaperButton>
+                <MenuItem>
+                  Assess a submission based on reviewer reviews
+                </MenuItem>
+                <MenuItem>Endorse third parties actions</MenuItem>
+                <MenuItem>
+                  Assess a submission based on reviewer reviews and author
+                  responses
+                </MenuItem>
+                <MenuItem>Publish a manuscript</MenuItem>
+              </ButtonMenu>
             </li>
             <li className={bem`__item`}>
               <div className={bem`__item-icon`}>
