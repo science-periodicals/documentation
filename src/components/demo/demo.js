@@ -42,7 +42,7 @@ export default class Demo extends React.PureComponent {
           <title>Quick start guide • sci.pe</title>
         </Helmet>
 
-        <div className={bem`header @__header`}>
+        <header className={bem`header @__header`}>
           <h1 className={bem`@__default-ui-type--display-1`}>
             Quick start guide
           </h1>
@@ -53,7 +53,7 @@ export default class Demo extends React.PureComponent {
           </p>
 
           <DemoTabs />
-        </div>
+        </header>
 
         {/* Note: right now video says science.ai all over, so need to redo */}
         {/*<VideoPlayer />*/}
