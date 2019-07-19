@@ -418,6 +418,11 @@
   &__professional-services {
     margin: var(--xlgrd) var(--xsgrd);
 
+    &__icon-row {
+      text-align: center;
+      color: var(--accent-color);
+      padding-top: var(--xsgrd);
+    }
     &__title {
       text-align: center;
       font: var(--ui-type--headline);
@@ -428,8 +433,11 @@
 
     &__sub-title {
       text-align: center;
-      font: var(--ui-type--subhead-1);
-      color: var(--ui-type--subhead-1__color);
+      font: var(--ui-type--subhead-2);
+      color: var(--accent-color);
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      font-weight: 500;
       margin: 1em;
     }
     &__body {
@@ -449,7 +457,7 @@
     }
 
     &__body-list {
-      columns: 2 24rem;
+      columns: 3 24rem;
       display: block;
       margin: var(--xsgrd) auto;
       hyphens: auto;

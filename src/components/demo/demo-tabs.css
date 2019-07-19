@@ -1,12 +1,15 @@
 .demo-tabs {
   min-height: 400px;
   margin-top: var(--xlgrd);
+  margin-bottom: var(--xlgrd);
 
   &__items {
     display: flex;
     justify-content: space-between;
     margin: 0;
     padding: 0;
+    background-color: var(--panel-bg-color);
+    padding: 0 var(--sgrd);
 
     @media (--large-desktop) {
       flex-direction: column;
@@ -20,7 +23,7 @@
     flex-grow: 1;
     margin: 16px 16px 16px 0px;
     background-color: white;
-    padding: 12px 32px 32px 32px;
+    padding: var(--xsgrd) var(--sgrd) var(--sgrd);
     border-radius: 12px;
     box-sizing: border-box;
     display: flex;
@@ -43,6 +46,17 @@
     }
   }
 
+  &__item-content {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+
+    & .paper-button {
+      align-self: center;
+    }
+  }
   &__item-icon {
     color: var(--accent-color);
     margin-top: 16px;
@@ -68,12 +82,10 @@
   }
 
   &__text {
-    font: var(--text_font_body_sans);
-    color: var(--color_text_grey);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
-    letter-spacing: 0.05em;
+    font: var(--sans-body-type);
+    color: var(--sans-body-type__color);
+    letter-spacing: var(--sans-body-type__letter-spacing);
+    text-align: left;
     hyphens: auto;
 
     @media (--small-desktop) {

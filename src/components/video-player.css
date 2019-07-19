@@ -1,5 +1,4 @@
 .video-player {
-  padding: 100px 64px 0px 64px;
   box-sizing: border-box;
   font-weight: 300;
   text-align: center;
@@ -23,7 +22,6 @@
 .video-player__error {
   color: #f00;
 }
-
 
 .theatre {
   background: var(--color_grey_100);

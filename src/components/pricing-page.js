@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import PropTypes from 'prop-types';
 import { PaperButtonLink, bemify, TextLogo } from '@scipe/ui';
 import { getId } from '@scipe/jsonld';
+import Iconoclass from '@scipe/iconoclass';
 import RoleBenefitsTabs from './role-benefits-tabs';
 
 export default class PricingPage extends React.Component {
@@ -173,20 +174,23 @@ export default class PricingPage extends React.Component {
         </section>
 
         <section className="pricing-page__professional-services">
-          <h2 className="pricing-page__professional-services__title">
+          {/* <h2 className="pricing-page__professional-services__title">
             Professional Services & Support
-          </h2>
+          </h2> */}
+
           <div className="pricing-page__professional-services__body">
+            <div className="pricing-page__professional-services__icon-row">
+              <Iconoclass iconName="hypermedia" size="32px" />
+            </div>
+            <h4 className="pricing-page__professional-services__sub-title">
+              Professional Services & Support
+            </h4>
             <p className="pricing-page__professional-services__body-intro">
               <TextLogo /> offers professional services and support to customers
               wanting to easily migrate existing journals, create unique user
               experiences, develop a journal brand, or benefit from additional
               editorial and production staff support.
             </p>
-
-            <h4 className="pricing-page__professional-services__sub-title">
-              Included Services
-            </h4>
 
             <ul className="pricing-page__professional-services__body-list">
               <li>Custom journal homepage design</li>
