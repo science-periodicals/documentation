@@ -3,6 +3,13 @@
   margin-top: var(--xlgrd);
   margin-bottom: var(--xlgrd);
 
+  &__role-title {
+    font: var(--ui-type--subhead-1);
+    color: var(--ui-type--headline__color);
+    letter-spacing: var(--ui-type--headline__letter-spacing);
+    padding: var(--mgrd) 0 var(--xsgrd);
+    background-color: var(--panel-bg-color);
+  }
   &__items {
     display: flex;
     justify-content: space-between;

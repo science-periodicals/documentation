@@ -5,7 +5,8 @@ import {
   TabsItem,
   PaperButton,
   ButtonMenu,
-  MenuItem
+  MenuItem,
+  TextLogo
 } from '@scipe/ui';
 import Iconoclass from '@scipe/iconoclass';
 
@@ -16,6 +17,9 @@ export default class DemoTabs extends React.PureComponent {
     return (
       <Tabs className={bem``}>
         <TabsItem title="Editor">
+          <h3 className="demo-tabs__role-title">
+            Try <TextLogo /> as an Editor
+          </h3>
           <ul className={bem`__items`}>
             <li className={bem`__item`}>
               <div className={bem`__item-icon`}>
