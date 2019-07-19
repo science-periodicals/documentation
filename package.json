@@ -116,10 +116,12 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet-async": "^1.0.2",
+    "react-player": "^1.11.1",
     "react-router-dom": "^5.0.1",
     "react-scroll": "^1.7.12",
     "schema.org": "^3.1.1",
     "smoothscroll-polyfill": "^0.4.4",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "webvtt-parser": "github:scienceai/webvtt#nodeify"
   }
 }

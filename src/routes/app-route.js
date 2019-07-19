@@ -66,7 +66,8 @@ const docSlugs = [
   'publication-types-and-style-guides',
   'editor-user-guide',
   'author-and-reviewer-user-guide',
-  'install'
+  'install',
+  'quick-start'
 ];
 
 router.get(

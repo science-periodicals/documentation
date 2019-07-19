@@ -1,0 +1,200 @@
+.video-player {
+  padding: 100px 64px 0px 64px;
+  box-sizing: border-box;
+  font-weight: 300;
+  text-align: center;
+  overflow-x: hidden;
+
+  /*box-shadow: inset 0 -8px 9px -10px rgba(0, 0, 0, 0.8);*/
+
+  @media (--small-tablet) {
+    min-height: auto;
+    padding: var(--lgrd) var(--sgrd);
+  }
+}
+.video-player__content {
+  margin: 0 auto;
+  max-width: 1232px;
+}
+.video-player__content > img:first-of-type {
+  max-width: 300px;
+}
+
+.video-player__error {
+  color: #f00;
+}
+
+
+.theatre {
+  background: var(--color_grey_100);
+  position: relative;
+}
+.theatre > .theater__player {
+  height: 480px;
+  max-width: 854px;
+  margin: 0 auto;
+}
+
+.theatre .theatre__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color_grey_100);
+}
+.theatre .theatre__overlay__content {
+  max-width: 730px;
+  height: 100%;
+  margin: 0 auto;
+  background: var(--color_grey_100);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+}
+.theatre .theatre__overlay__content h2 {
+  font-size: 26px;
+  line-height: 32px;
+}
+.theatre .theatre__overlay__content p {
+  margin: 0 10px 30px 10px;
+}
+
+/* captioning */
+
+.captioning {
+  margin-bottom: 5em;
+  @media (--small-tablet) {
+    margin-bottom: 2em;
+  }
+}
+/* we need to set our own counter, otherwise inline-block kill the number anyway */
+.captioning__chapters {
+  border-bottom: 2px solid #e0e0e0;
+  padding: 16px 0;
+}
+.captioning__chapters ol {
+  counter-reset: chapters;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  font-size: 13px;
+  line-height: 24px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.captioning__chapters ol li {
+  display: inline-block;
+  margin: 0 10px;
+  text-transform: uppercase;
+  font-weight: normal;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.captioning__chapters ol li .chapter__title::before {
+  counter-increment: chapters;
+  content: counter(chapters) '. ';
+}
+/*.captioning__chapters ol li.active-chapter::before {
+  counter-increment: chapters;
+  content: "➤ " counter(chapters) ". ";
+}*/
+.captioning__chapters ol li .chapters__arrow {
+  visibility: hidden;
+  font-size: 11px;
+}
+.captioning__chapters ol li.active-chapter .chapters__arrow {
+  visibility: visible;
+}
+.captioning__chapters,
+.captioning__chapters a {
+  color: #767676;
+}
+.captioning__chapters a:hover {
+  color: black;
+}
+.captioning__chapters li.active-chapter,
+.captioning__chapters li.active-chapter a,
+.captioning__captions a.active-cue {
+  color: #f15d44;
+  transition: color 0.4s;
+}
+
+.captioning__captions {
+  text-align: left;
+  font: var(--text_font_body_serif);
+  font-size: 18px;
+  line-height: 1.75em;
+  margin-top: 20px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+.captioning__captions p {
+  padding-top: 0;
+}
+.captioning__captions .captions__arrow {
+  color: lightgrey;
+  font-size: 13px;
+  padding: 0 4px;
+}
+.captioning__captions a.active-cue .captions__arrow {
+  color: #f15d44;
+}
+.captioning__captions a {
+  color: #464646;
+  cursor: pointer;
+}
+
+/* this is mostly to add padding inside items when the screen is smaller than the max-size */
+@media screen and (max-width: 1232px) {
+  section.move-science-forward,
+  .product-page {
+  }
+}
+@media screen and (max-width: 1100px) {
+  /*#product-grid > .product-grid__item,
+  #product-nav > .product-nav__item {
+    flex-basis: 50%;
+  }*/
+}
+@media screen and (max-width: 1000px) {
+  .product-page {
+    padding: 80px 32px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .captioning__chapters ol li {
+    font-size: 11px;
+  }
+  .captioning__chapters ol li .chapters__arrow {
+    visibility: hidden;
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .captioning__chapters ol {
+    flex-direction: column;
+  }
+
+  .theatre .theatre__overlay__content h2 {
+    font-size: 21px;
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 399px) {
+  .captioning__chapters ol li {
+    font-size: 13px;
+  }
+  .captioning__chapters ol li .chapters__arrow {
+    visibility: hidden;
+    font-size: 11px;
+  }
+}

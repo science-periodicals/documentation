@@ -58,6 +58,24 @@ export default class SplashPage extends React.Component {
 
         <ul className={bem`__doc-list @__clear-list-styles `}>
           <li>
+            <Card className={bem`__card --editor-user-guide`}>
+              <div className={bem`__card-header`}>
+                <h2 className={bem`__title @__default-ui-type--headline`}>
+                  <Link to={{ pathname: `${match.path}/quick-start` }}>
+                    Quick start guide
+                  </Link>
+                </h2>
+                <Iconoclass
+                  className={bem`__card-icon`}
+                  iconName="smartAction"
+                  round={true}
+                  size="4rem"
+                />
+              </div>
+            </Card>
+          </li>
+
+          <li>
             <Card className={bem`__card --workflows`}>
               <div className={bem`__card-header`}>
                 <h2 className={bem`__title @__default-ui-type--headline`}>
@@ -107,7 +125,7 @@ export default class SplashPage extends React.Component {
                 </h2>
                 <Iconoclass
                   className={bem`__card-icon`}
-                  iconName="smartAction"
+                  iconName="roleEditor"
                   round={true}
                   size="4rem"
                 />

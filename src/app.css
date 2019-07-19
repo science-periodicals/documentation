@@ -23,6 +23,11 @@
 @import './components/code-example.css';
 @import './components/info.css';
 
+
+/* Demo CSS */
+@import './components/video-player.css';
+@import './components/demo/demo-tabs.css';
+
 /* DS3 CSS */
 @import './ds3.css';
 @import './components/ds3/custom-box.css';

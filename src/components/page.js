@@ -4,6 +4,9 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import { Card, ErrorCard, CSS_HEADER_HEIGHT } from '@scipe/ui';
 import Loading from './loading';
 
+const Demo = React.lazy(() =>
+  import(/* webpackChunkName: "Demo" */ './demo/demo')
+);
 const Ds3 = React.lazy(() => import(/* webpackChunkName: "Ds3" */ './ds3/ds3'));
 const Archive = React.lazy(() =>
   import(/* webpackChunkName: "Archive" */ './archive/archive')
@@ -175,6 +178,13 @@ export default class Page extends React.Component {
         <Suspense fallback={<Loading />}>
           <div onClick={this.handleClick}>
             <Switch>
+              <Route
+                exact
+                path="/get-started/quick-start"
+                render={props => (
+                  <Demo onUpdate={onUpdate} $content={$content} />
+                )}
+              />
               <Route
                 exact
                 path="/get-started/archive"
