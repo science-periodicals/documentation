@@ -178,13 +178,7 @@ export default class Page extends React.Component {
         <Suspense fallback={<Loading />}>
           <div onClick={this.handleClick}>
             <Switch>
-              <Route
-                exact
-                path="/get-started/quick-start"
-                render={props => (
-                  <Demo onUpdate={onUpdate} $content={$content} />
-                )}
-              />
+              <Route exact path="/get-started/quick-start" component={Demo} />
               <Route
                 exact
                 path="/get-started/archive"

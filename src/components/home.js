@@ -192,6 +192,7 @@ class Home extends React.Component {
             leftExpanded={
               slug !== undefined &&
               slug !== 'pricing' &&
+              slug !== 'quick-start' &&
               slug !== 'features' &&
               slug !== 'vision' &&
               leftExpanded
@@ -211,6 +212,7 @@ class Home extends React.Component {
                   slug !== 'pricing' &&
                   slug !== 'terms' &&
                   slug !== 'privacy' &&
+                  slug !== 'quick-start' &&
                   slug !== 'features' &&
                   slug !== 'vision'
                     ? true
@@ -253,17 +255,20 @@ class Home extends React.Component {
             </AppLayoutHeader>
 
             {/* Only display ToC for documentation pages */}
-            {slug && slug !== 'features' && slug !== 'pricing' && (
-              <AppLayoutLeft backgroundOnDesktop={false}>
-                <div className="home__toc">
-                  <Route exact path="/get-started/:slug">
-                    {({ match }) =>
-                      match ? <PageToc $content={$content} /> : null
-                    }
-                  </Route>
-                </div>
-              </AppLayoutLeft>
-            )}
+            {slug &&
+              slug !== 'features' &&
+              slug !== 'pricing' &&
+              slug !== 'quick-start' && (
+                <AppLayoutLeft backgroundOnDesktop={false}>
+                  <div className="home__toc">
+                    <Route exact path="/get-started/:slug">
+                      {({ match }) =>
+                        match ? <PageToc $content={$content} /> : null
+                      }
+                    </Route>
+                  </div>
+                </AppLayoutLeft>
+              )}
 
             <AppLayoutMiddle widthMode="auto" maxContentWidth="980px">
               <div className="home__body">
