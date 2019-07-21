@@ -1,21 +1,48 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import {
   bemify,
   Tabs,
   TabsItem,
-  PaperButton,
+  PaperButtonLink,
   ButtonMenu,
   MenuItem,
   TextLogo
 } from '@scipe/ui';
 import Iconoclass from '@scipe/iconoclass';
 
-export default class DemoTabs extends React.PureComponent {
+class DemoTabs extends React.Component {
+  static propTypes = {
+    // react-router
+    location: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
+  };
+
+  handleNav = (tab, id) => {
+    const { history, location } = this.props;
+    history.push({
+      pathname: location.pathname,
+      search: location.search,
+      hash: `#${id.toLowerCase()}`
+    });
+  };
+
   render() {
+    const { location } = this.props;
     const bem = bemify('demo-tabs');
+    const activeId = location.hash.substring(1).toLowerCase();
+    const tab =
+      activeId === 'authors'
+        ? 3
+        : activeId === 'producers'
+        ? 1
+        : activeId === 'reviewers'
+        ? 2
+        : 0;
 
     return (
-      <Tabs className={bem``}>
+      <Tabs className={bem``} activeTab={tab} onChange={this.handleNav}>
         <TabsItem title="Editors">
           <h3 className="demo-tabs__role-title">
             Try <TextLogo /> as an Editor
@@ -32,9 +59,15 @@ export default class DemoTabs extends React.PureComponent {
                   Organize your staff, setup editorial workflows, blinding
                   requirements, publication types and journal styles.
                 </p>
-                <PaperButton raised={true} capsule={true}>
+                <PaperButtonLink
+                  raised={true}
+                  capsule={true}
+                  href={`/demo?user=engelbart-demo&next=${encodeURIComponent(
+                    '/settings/journal/research-demo/journal'
+                  )}`}
+                >
                   Launch demo
-                </PaperButton>
+                </PaperButtonLink>
               </div>
             </li>
 
@@ -49,9 +82,15 @@ export default class DemoTabs extends React.PureComponent {
                   journals incoming submissions.
                 </p>
 
-                <PaperButton raised={true} capsule={true}>
+                <PaperButtonLink
+                  raised={true}
+                  capsule={true}
+                  href={`/demo?user=engelbart-demo&next=${encodeURIComponent(
+                    '/'
+                  )}`}
+                >
                   Launch demo
-                </PaperButton>
+                </PaperButtonLink>
               </div>
             </li>
 
@@ -68,15 +107,35 @@ export default class DemoTabs extends React.PureComponent {
                 </p>
                 <ButtonMenu raised={true} capsule={true}>
                   Launch demo
-                  <MenuItem>
+                  <MenuItem
+                    href={`/demo?user=engelbart-demo&next=${encodeURIComponent(
+                      '/research-demo/editor-assesses-reviewed-submission/submission?stage=1&action=3'
+                    )}`}
+                  >
                     Assess a submission based on reviewer reviews
                   </MenuItem>
-                  <MenuItem>Endorse third parties actions</MenuItem>
-                  <MenuItem>
+                  <MenuItem
+                    href={`/demo?user=engelbart-demo&next=${encodeURIComponent(
+                      '/research-demo/editor-endorses-third-party-action/submission?action=1&stage=0'
+                    )}`}
+                  >
+                    Endorse third parties actions
+                  </MenuItem>
+                  <MenuItem
+                    href={`/demo?user=engelbart-demo&next=${encodeURIComponent(
+                      '/research-demo/editor-assesses-revised-submission/submission?stage=2&action=1&version=0.0.0-0'
+                    )}`}
+                  >
                     Assess a submission based on reviewer reviews and author
                     responses
                   </MenuItem>
-                  <MenuItem>Publish a manuscript</MenuItem>
+                  <MenuItem
+                    href={`/demo?user=engelbart-demo&next=${encodeURIComponent(
+                      '/research-demo/editor-publishes-submission/submission?stage=3&action=1'
+                    )}`}
+                  >
+                    Publish a manuscript
+                  </MenuItem>
                 </ButtonMenu>
               </div>
             </li>
@@ -93,9 +152,9 @@ export default class DemoTabs extends React.PureComponent {
                   all from your searchable journal homepages.
                 </p>
 
-                <PaperButton raised={true} capsule={true}>
+                <PaperButtonLink raised={true} capsule={true}>
                   Launch demo
-                </PaperButton>
+                </PaperButtonLink>
               </div>
             </li>
           </ul>
@@ -116,9 +175,9 @@ export default class DemoTabs extends React.PureComponent {
                 <p className={bem`__text`}>
                   Setup typesetting services and production requirements.
                 </p>
-                <PaperButton raised={true} capsule={true}>
+                <PaperButtonLink raised={true} capsule={true}>
                   Launch demo
-                </PaperButton>
+                </PaperButtonLink>
               </div>
             </li>
 
@@ -133,9 +192,9 @@ export default class DemoTabs extends React.PureComponent {
                   submissions requiring your attention.
                 </p>
 
-                <PaperButton raised={true} capsule={true}>
+                <PaperButtonLink raised={true} capsule={true}>
                   Launch demo
-                </PaperButton>
+                </PaperButtonLink>
               </div>
             </li>
 
@@ -173,9 +232,9 @@ export default class DemoTabs extends React.PureComponent {
                   Get access to production preview at any stage of a workflow.
                 </p>
 
-                <PaperButton raised={true} capsule={true}>
+                <PaperButtonLink raised={true} capsule={true}>
                   Launch demo
-                </PaperButton>
+                </PaperButtonLink>
               </div>
             </li>
           </ul>
@@ -198,9 +257,9 @@ export default class DemoTabs extends React.PureComponent {
                   service even for workflows where reviewers identity needs to
                   remain anonymous.
                 </p>
-                <PaperButton raised={true} capsule={true}>
+                <PaperButtonLink raised={true} capsule={true}>
                   Launch demo
-                </PaperButton>
+                </PaperButtonLink>
               </div>
             </li>
 
@@ -215,9 +274,9 @@ export default class DemoTabs extends React.PureComponent {
                   submissions that require your attention.
                 </p>
 
-                <PaperButton raised={true} capsule={true}>
+                <PaperButtonLink raised={true} capsule={true}>
                   Launch demo
-                </PaperButton>
+                </PaperButtonLink>
               </div>
             </li>
 
@@ -257,9 +316,9 @@ export default class DemoTabs extends React.PureComponent {
                   anonymity constraints set by the journal.
                 </p>
 
-                <PaperButton raised={true} capsule={true}>
+                <PaperButtonLink raised={true} capsule={true}>
                   Launch demo
-                </PaperButton>
+                </PaperButtonLink>
               </div>
             </li>
           </ul>
@@ -281,9 +340,9 @@ export default class DemoTabs extends React.PureComponent {
                   Submit your work without having to fill any forms, only file
                   uploads are required.
                 </p>
-                <PaperButton raised={true} capsule={true}>
+                <PaperButtonLink raised={true} capsule={true}>
                   Launch demo
-                </PaperButton>
+                </PaperButtonLink>
               </div>
             </li>
 
@@ -298,9 +357,9 @@ export default class DemoTabs extends React.PureComponent {
                   with a full overview of each step of the editorial workflow.
                 </p>
 
-                <PaperButton raised={true} capsule={true}>
+                <PaperButtonLink raised={true} capsule={true}>
                   Launch demo
-                </PaperButton>
+                </PaperButtonLink>
               </div>
             </li>
 
@@ -341,9 +400,9 @@ export default class DemoTabs extends React.PureComponent {
                   machines.
                 </p>
 
-                <PaperButton raised={true} capsule={true}>
+                <PaperButtonLink raised={true} capsule={true}>
                   Launch demo
-                </PaperButton>
+                </PaperButtonLink>
               </div>
             </li>
           </ul>
@@ -352,3 +411,5 @@ export default class DemoTabs extends React.PureComponent {
     );
   }
 }
+
+export default withRouter(DemoTabs);
