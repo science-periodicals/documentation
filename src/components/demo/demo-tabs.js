@@ -123,14 +123,14 @@ class DemoTabs extends React.Component {
                   <MenuItem
                     href={urlify(
                       { username: 'engelbart-demo' },
-                      '/research-demo/editor-endorses-third-party-action/submission',
+                      '/research-demo/editor-endorses-apc-discount-action/submission',
                       {
-                        stage: 0,
-                        action: 1
+                        stage: 3,
+                        action: 0
                       }
                     )}
                   >
-                    Endorse third parties actions
+                    Endorse author APC discount request
                   </MenuItem>
                   <MenuItem
                     href={urlify(
@@ -313,8 +313,18 @@ class DemoTabs extends React.Component {
                   Get access to production preview at any stage of a workflow.
                 </p>
 
-                {/* TODO */}
-                <PaperButtonLink raised={true} capsule={true}>
+                <PaperButtonLink
+                  raised={true}
+                  capsule={true}
+                  href={urlify(
+                    { username: 'taylor-demo' },
+                    '/research-demo/typesetter-previews-typeset-submission/submission',
+                    {
+                      stage: 0,
+                      action: 4
+                    }
+                  )}
+                >
                   Launch demo
                 </PaperButtonLink>
               </div>
@@ -464,24 +474,38 @@ class DemoTabs extends React.Component {
 
               <div className={bem`__item-content`}>
                 <p className={bem`__text`}>
-                  Submit your work without having to fill any forms, only file
-                  uploads are required.
+                  Submit your work without having to fill any forms (only file
+                  uploads are required) and fill author declarations
+                  collaboratively.
                 </p>
-                {/* TODO? pay APC and fill declaration */}
-                <PaperButtonLink
-                  raised={true}
-                  capsule={true}
-                  href={urlify(
-                    { username: 'de-soto-demo' },
-                    '/research-demo/author-prepares-submission/submission',
-                    {
-                      stage: 0,
-                      action: 0
-                    }
-                  )}
-                >
+
+                <ButtonMenu raised={true} capsule={true}>
                   Launch demo
-                </PaperButtonLink>
+                  <MenuItem
+                    href={urlify(
+                      { username: 'de-soto-demo' },
+                      '/research-demo/author-prepares-submission/submission',
+                      {
+                        stage: 0,
+                        action: 0
+                      }
+                    )}
+                  >
+                    Submit manuscript
+                  </MenuItem>
+                  <MenuItem
+                    href={urlify(
+                      { username: 'hamilton-demo' },
+                      '/research-demo/author-makes-declarations/submission',
+                      {
+                        stage: 0,
+                        action: 1
+                      }
+                    )}
+                  >
+                    Fill author declarations collaboratively
+                  </MenuItem>
+                </ButtonMenu>
               </div>
             </li>
 
@@ -547,7 +571,6 @@ class DemoTabs extends React.Component {
                   machines.
                 </p>
 
-                {/* TODO? CheckAction */}
                 <PaperButtonLink
                   raised={true}
                   capsule={true}
