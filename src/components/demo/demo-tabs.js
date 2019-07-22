@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import querystring from 'querystring';
+import omit from 'lodash/omit';
 import { withRouter } from 'react-router-dom';
 import {
   bemify,
@@ -62,9 +64,10 @@ class DemoTabs extends React.Component {
                 <PaperButtonLink
                   raised={true}
                   capsule={true}
-                  href={`/demo?user=engelbart-demo&next=${encodeURIComponent(
+                  href={urlify(
+                    { username: 'engelbart-demo' },
                     '/settings/journal/research-demo/journal'
-                  )}`}
+                  )}
                 >
                   Launch demo
                 </PaperButtonLink>
@@ -85,9 +88,7 @@ class DemoTabs extends React.Component {
                 <PaperButtonLink
                   raised={true}
                   capsule={true}
-                  href={`/demo?user=engelbart-demo&next=${encodeURIComponent(
-                    '/'
-                  )}`}
+                  href={urlify({ username: 'engelbart-demo' }, '/')}
                 >
                   Launch demo
                 </PaperButtonLink>
@@ -108,31 +109,52 @@ class DemoTabs extends React.Component {
                 <ButtonMenu raised={true} capsule={true}>
                   Launch demo
                   <MenuItem
-                    href={`/demo?user=engelbart-demo&next=${encodeURIComponent(
-                      '/research-demo/editor-assesses-reviewed-submission/submission?stage=1&action=3'
-                    )}`}
+                    href={urlify(
+                      { username: 'engelbart-demo' },
+                      '/research-demo/editor-assesses-reviewed-submission/submission',
+                      {
+                        stage: 1,
+                        action: 3
+                      }
+                    )}
                   >
                     Assess a submission based on reviewer reviews
                   </MenuItem>
                   <MenuItem
-                    href={`/demo?user=engelbart-demo&next=${encodeURIComponent(
-                      '/research-demo/editor-endorses-third-party-action/submission?action=1&stage=0'
-                    )}`}
+                    href={urlify(
+                      { username: 'engelbart-demo' },
+                      '/research-demo/editor-endorses-third-party-action/submission',
+                      {
+                        stage: 0,
+                        action: 1
+                      }
+                    )}
                   >
                     Endorse third parties actions
                   </MenuItem>
                   <MenuItem
-                    href={`/demo?user=engelbart-demo&next=${encodeURIComponent(
-                      '/research-demo/editor-assesses-revised-submission/submission?stage=2&action=1&version=0.0.0-0'
-                    )}`}
+                    href={urlify(
+                      { username: 'engelbart-demo' },
+                      '/research-demo/editor-assesses-reviewed-submission/submission',
+                      {
+                        stage: 2,
+                        action: 1,
+                        version: '0.0.0-0'
+                      }
+                    )}
                   >
                     Assess a submission based on reviewer reviews and author
                     responses
                   </MenuItem>
                   <MenuItem
-                    href={`/demo?user=engelbart-demo&next=${encodeURIComponent(
-                      '/research-demo/editor-publishes-submission/submission?stage=3&action=1'
-                    )}`}
+                    href={urlify(
+                      { username: 'engelbart-demo' },
+                      '/research-demo/editor-publishes-submission/submission',
+                      {
+                        stage: 3,
+                        action: 1
+                      }
+                    )}
                   >
                     Publish a manuscript
                   </MenuItem>
@@ -152,9 +174,54 @@ class DemoTabs extends React.Component {
                   all from your searchable journal homepages.
                 </p>
 
-                <PaperButtonLink raised={true} capsule={true}>
+                <ButtonMenu raised={true} capsule={true}>
                   Launch demo
-                </PaperButtonLink>
+                  <MenuItem
+                    href={urlify(
+                      {
+                        hostname: 'research-demo.sci.pe',
+                        username: 'engelbart-demo'
+                      },
+                      '/'
+                    )}
+                  >
+                    Journal homepage
+                  </MenuItem>
+                  <MenuItem
+                    href={urlify(
+                      {
+                        hostname: 'research-demo.sci.pe',
+                        username: 'engelbart-demo'
+                      },
+                      '/issues'
+                    )}
+                  >
+                    Issues
+                  </MenuItem>
+                  <MenuItem
+                    href={urlify(
+                      {
+                        hostname: 'research-demo.sci.pe',
+                        username: 'engelbart-demo'
+                      },
+                      '/rfas'
+                    )}
+                  >
+                    Request for articles
+                  </MenuItem>
+                  {/* TODO list per type (math article, article with code etc.) ? or link to one with all types */}
+                  <MenuItem
+                    href={urlify(
+                      {
+                        hostname: 'research-demo.sci.pe',
+                        username: 'engelbart-demo'
+                      },
+                      '/ceballos2017a-demo'
+                    )}
+                  >
+                    Published article
+                  </MenuItem>
+                </ButtonMenu>
               </div>
             </li>
           </ul>
@@ -175,7 +242,14 @@ class DemoTabs extends React.Component {
                 <p className={bem`__text`}>
                   Setup typesetting services and production requirements.
                 </p>
-                <PaperButtonLink raised={true} capsule={true}>
+                <PaperButtonLink
+                  raised={true}
+                  capsule={true}
+                  href={urlify(
+                    { username: 'engelbart-demo' },
+                    '/settings/organization/sri-demo/services'
+                  )}
+                >
                   Launch demo
                 </PaperButtonLink>
               </div>
@@ -192,7 +266,11 @@ class DemoTabs extends React.Component {
                   submissions requiring your attention.
                 </p>
 
-                <PaperButtonLink raised={true} capsule={true}>
+                <PaperButtonLink
+                  raised={true}
+                  capsule={true}
+                  href={urlify({ username: 'taylor-demo' }, '/')}
+                >
                   Launch demo
                 </PaperButtonLink>
               </div>
@@ -207,18 +285,21 @@ class DemoTabs extends React.Component {
                 <p className={bem`__text`}>
                   Produce submissions and manage communication with authors.
                 </p>
-                <ButtonMenu raised={true} capsule={true}>
+
+                <PaperButtonLink
+                  raised={true}
+                  capsule={true}
+                  href={urlify(
+                    { username: 'taylor-demo' },
+                    '/research-demo/typesetter-typesets-submission/submission',
+                    {
+                      stage: 0,
+                      action: 4
+                    }
+                  )}
+                >
                   Launch demo
-                  <MenuItem>
-                    Assess a submission based on reviewer reviews
-                  </MenuItem>
-                  <MenuItem>Endorse third parties actions</MenuItem>
-                  <MenuItem>
-                    Assess a submission based on reviewer reviews and author
-                    responses
-                  </MenuItem>
-                  <MenuItem>Publish a manuscript</MenuItem>
-                </ButtonMenu>
+                </PaperButtonLink>
               </div>
             </li>
 
@@ -232,6 +313,7 @@ class DemoTabs extends React.Component {
                   Get access to production preview at any stage of a workflow.
                 </p>
 
+                {/* TODO */}
                 <PaperButtonLink raised={true} capsule={true}>
                   Launch demo
                 </PaperButtonLink>
@@ -257,7 +339,14 @@ class DemoTabs extends React.Component {
                   service even for workflows where reviewers identity needs to
                   remain anonymous.
                 </p>
-                <PaperButtonLink raised={true} capsule={true}>
+                <PaperButtonLink
+                  raised={true}
+                  capsule={true}
+                  href={urlify(
+                    { username: 'licklider-demo' },
+                    '/settings/profile/bio'
+                  )}
+                >
                   Launch demo
                 </PaperButtonLink>
               </div>
@@ -274,7 +363,11 @@ class DemoTabs extends React.Component {
                   submissions that require your attention.
                 </p>
 
-                <PaperButtonLink raised={true} capsule={true}>
+                <PaperButtonLink
+                  raised={true}
+                  capsule={true}
+                  href={urlify({ username: 'licklider-demo' }, '/')}
+                >
                   Launch demo
                 </PaperButtonLink>
               </div>
@@ -292,15 +385,42 @@ class DemoTabs extends React.Component {
                 </p>
                 <ButtonMenu raised={true} capsule={true}>
                   Launch demo
-                  <MenuItem>
-                    Assess a submission based on reviewer reviews
+                  <MenuItem
+                    href={urlify(
+                      { username: 'licklider-demo' },
+                      '/research-demo/reviewer-accepts-invitation/submission',
+                      {
+                        stage: 1,
+                        action: 0
+                      }
+                    )}
+                  >
+                    Reviewer accepts invitation to review
                   </MenuItem>
-                  <MenuItem>Endorse third parties actions</MenuItem>
-                  <MenuItem>
-                    Assess a submission based on reviewer reviews and author
-                    responses
+                  <MenuItem
+                    href={urlify(
+                      { username: 'licklider-demo' },
+                      '/research-demo/reviewer-reviews-submission/submission',
+                      {
+                        stage: 1,
+                        action: 0
+                      }
+                    )}
+                  >
+                    Reviewer reviews submission
                   </MenuItem>
-                  <MenuItem>Publish a manuscript</MenuItem>
+                  <MenuItem
+                    href={urlify(
+                      { username: 'licklider-demo' },
+                      '/research-demo/reviewer-reviews-revised-submission/submission',
+                      {
+                        stage: 3,
+                        action: 0
+                      }
+                    )}
+                  >
+                    Reviewer reviews revised submission
+                  </MenuItem>
                 </ButtonMenu>
               </div>
             </li>
@@ -316,7 +436,14 @@ class DemoTabs extends React.Component {
                   anonymity constraints set by the journal.
                 </p>
 
-                <PaperButtonLink raised={true} capsule={true}>
+                <PaperButtonLink
+                  raised={true}
+                  capsule={true}
+                  href={urlify(
+                    { username: 'licklider-demo' },
+                    '/about/licklider-demo'
+                  )}
+                >
                   Launch demo
                 </PaperButtonLink>
               </div>
@@ -340,7 +467,19 @@ class DemoTabs extends React.Component {
                   Submit your work without having to fill any forms, only file
                   uploads are required.
                 </p>
-                <PaperButtonLink raised={true} capsule={true}>
+                {/* TODO? pay APC and fill declaration */}
+                <PaperButtonLink
+                  raised={true}
+                  capsule={true}
+                  href={urlify(
+                    { username: 'de-soto-demo' },
+                    '/research-demo/author-prepares-submission/submission',
+                    {
+                      stage: 0,
+                      action: 0
+                    }
+                  )}
+                >
                   Launch demo
                 </PaperButtonLink>
               </div>
@@ -357,7 +496,11 @@ class DemoTabs extends React.Component {
                   with a full overview of each step of the editorial workflow.
                 </p>
 
-                <PaperButtonLink raised={true} capsule={true}>
+                <PaperButtonLink
+                  raised={true}
+                  capsule={true}
+                  href={urlify({ username: 'de-soto-demo' }, '/')}
+                >
                   Launch demo
                 </PaperButtonLink>
               </div>
@@ -373,18 +516,22 @@ class DemoTabs extends React.Component {
                   Revise your manuscript based on editors and reviewers feedback
                   made available directly in context.
                 </p>
-                <ButtonMenu raised={true} capsule={true}>
+
+                <PaperButtonLink
+                  raised={true}
+                  capsule={true}
+                  href={urlify(
+                    { username: 'hamilton-demo' },
+                    '/research-demo/author-prepares-revision/submission',
+                    {
+                      stage: 2,
+                      action: 0,
+                      version: '0.0.0-0'
+                    }
+                  )}
+                >
                   Launch demo
-                  <MenuItem>
-                    Assess a submission based on reviewer reviews
-                  </MenuItem>
-                  <MenuItem>Endorse third parties actions</MenuItem>
-                  <MenuItem>
-                    Assess a submission based on reviewer reviews and author
-                    responses
-                  </MenuItem>
-                  <MenuItem>Publish a manuscript</MenuItem>
-                </ButtonMenu>
+                </PaperButtonLink>
               </div>
             </li>
 
@@ -400,7 +547,18 @@ class DemoTabs extends React.Component {
                   machines.
                 </p>
 
-                <PaperButtonLink raised={true} capsule={true}>
+                {/* TODO? CheckAction */}
+                <PaperButtonLink
+                  raised={true}
+                  capsule={true}
+                  href={urlify(
+                    {
+                      username: 'de-soto-demo',
+                      hostname: 'research-demo.sci.pe'
+                    },
+                    '/desoto2017a-demo'
+                  )}
+                >
                   Launch demo
                 </PaperButtonLink>
               </div>
@@ -413,3 +571,34 @@ class DemoTabs extends React.Component {
 }
 
 export default withRouter(DemoTabs);
+
+function urlify({ hostname, username }, pathname, qs = {}) {
+  let url;
+
+  if (hostname) {
+    const isDevOrNightly =
+      process.env.NODE_ENV !== 'production' ||
+      (typeof window !== 'undefined' &&
+        window.location &&
+        window.location.hostname === 'nightly.sci.pe');
+
+    if (isDevOrNightly) {
+      url = `${pathname}?${querystring.stringify(
+        Object.assign({}, qs, { hostname })
+      )}`;
+    } else {
+      const qs = querystring.stringify(omit(qs, ['hostname']));
+
+      url = `https://${hostname}${qs ? `?${qs}` : ''}`;
+    }
+  } else {
+    url = `${pathname}?${querystring.stringify(qs)}`;
+  }
+
+  const root = ''; // set to 'http://127.0.0.1:3000' for local testing
+
+  return `${root}/demo?${querystring.stringify({
+    user: username,
+    next: url
+  })}`;
+}

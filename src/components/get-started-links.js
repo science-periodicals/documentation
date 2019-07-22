@@ -95,15 +95,13 @@ export default class GetStartedLinks extends React.Component {
             </ul>
 
             <div className={bem`__submit`}>
-              {/* <PaperButtonLink raised={!isDismissible} href="/new/journal">
-                  Start a journal
-                  </PaperButtonLink> */}
               <ButtonMenu
                 title="Get Started"
                 raised={!isDismissible}
                 align="right"
               >
                 <span style={{ paddingLeft: '8px' }}>Get Started</span>
+                <MenuItem to="/get-started/quick-start">View demo</MenuItem>
                 <MenuItem href="/new/journal">
                   Start a journal hosted by <TextLogo />
                 </MenuItem>

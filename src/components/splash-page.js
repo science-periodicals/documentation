@@ -41,6 +41,7 @@ export default class SplashPage extends React.Component {
             <div className={bem`__splash-cta`}>
               <ButtonMenu title="Get Started" raised={true} align="right">
                 <span style={{ paddingLeft: '8px' }}>Get Started</span>
+                <MenuItem to="/get-started/quick-start">View demo</MenuItem>
                 <MenuItem href="/new/journal">
                   Start a journal hosted by <TextLogo />
                 </MenuItem>
