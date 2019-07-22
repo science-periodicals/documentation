@@ -30,6 +30,15 @@ npm install
 npm run watch
 ```
 
+### Testing the demos
+
+1. Be sure that app-suite is running on `http://127.0.0.1:3000`
+2. Load the `documentation` story data (`create-story -r --prod`)
+3. Warmup (`librarian warmup`)
+4. Run the documentation dev server (`npm run watch`) and be sure that
+  `NODE_ENV` is not set to `production`
+5. Visit http://127.0.0.1:3335/get-started/quick-start
+
 ## CSS Best Practices
 
 For typography, use the default styles defined in `@scipe/ui/stylesheets/typograpy.css`.

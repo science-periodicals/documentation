@@ -598,13 +598,13 @@ export default withRouter(DemoTabs);
 function urlify({ hostname, username }, pathname, qs = {}) {
   let url;
 
-  if (hostname) {
-    const isDevOrNightly =
-      process.env.NODE_ENV !== 'production' ||
-      (typeof window !== 'undefined' &&
-        window.location &&
-        window.location.hostname === 'nightly.sci.pe');
+  const isDevOrNightly =
+    process.env.NODE_ENV !== 'production' ||
+    (typeof window !== 'undefined' &&
+      window.location &&
+      window.location.hostname === 'nightly.sci.pe');
 
+  if (hostname) {
     if (isDevOrNightly) {
       url = `${pathname}?${querystring.stringify(
         Object.assign({}, qs, { hostname })
@@ -618,7 +618,14 @@ function urlify({ hostname, username }, pathname, qs = {}) {
     url = `${pathname}?${querystring.stringify(qs)}`;
   }
 
-  const root = ''; // set to 'http://127.0.0.1:3000' for local testing
+  const root =
+    isDevOrNightly &&
+    typeof window !== 'undefined' &&
+    window.location &&
+    window.location.host &&
+    window.location.host.startsWith('127.0.0.1:3335')
+      ? 'http://127.0.0.1:3000'
+      : '';
 
   return `${root}/demo?${querystring.stringify({
     user: username,
