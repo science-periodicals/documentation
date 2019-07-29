@@ -41,7 +41,7 @@ export default class SplashPage extends React.Component {
             <div className={bem`__splash-cta`}>
               <ButtonMenu title="Get Started" raised={true} align="right">
                 <span style={{ paddingLeft: '8px' }}>Get Started</span>
-                <MenuItem to="/get-started/quick-start">View demo</MenuItem>
+                {/*<MenuItem to="/get-started/quick-start">View demo</MenuItem>*/}
                 <MenuItem href="/new/journal">
                   Start a journal hosted by <TextLogo />
                 </MenuItem>
@@ -58,6 +58,7 @@ export default class SplashPage extends React.Component {
         </div>
 
         <ul className={bem`__doc-list @__clear-list-styles `}>
+          {/*
           <li>
             <Card className={bem`__card --editor-user-guide`}>
               <div className={bem`__card-header`}>
@@ -74,7 +75,7 @@ export default class SplashPage extends React.Component {
                 />
               </div>
             </Card>
-          </li>
+          </li>*/}
 
           <li>
             <Card className={bem`__card --workflows`}>

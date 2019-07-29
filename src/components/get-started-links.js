@@ -101,7 +101,7 @@ export default class GetStartedLinks extends React.Component {
                 align="right"
               >
                 <span style={{ paddingLeft: '8px' }}>Get Started</span>
-                <MenuItem to="/get-started/quick-start">View demo</MenuItem>
+                {/*<MenuItem to="/get-started/quick-start">View demo</MenuItem>*/}
                 <MenuItem href="/new/journal">
                   Start a journal hosted by <TextLogo />
                 </MenuItem>
