@@ -61,12 +61,13 @@ class DemoTabs extends React.Component {
                   Organize your staff, setup editorial workflows, blinding
                   requirements, publication types and journal styles.
                 </p>
+
                 <PaperButtonLink
                   raised={true}
                   capsule={true}
                   href={urlify(
                     { username: 'engelbart-demo' },
-                    '/settings/journal/research-demo/journal'
+                    '/settings/journal/demo/journal'
                   )}
                 >
                   Launch demo
@@ -111,7 +112,7 @@ class DemoTabs extends React.Component {
                   <MenuItem
                     href={urlify(
                       { username: 'engelbart-demo' },
-                      '/research-demo/editor-assesses-reviewed-submission/submission',
+                      '/demo/editor-assesses-reviewed-submission/submission',
                       {
                         stage: 1,
                         action: 3
@@ -123,7 +124,7 @@ class DemoTabs extends React.Component {
                   <MenuItem
                     href={urlify(
                       { username: 'engelbart-demo' },
-                      '/research-demo/editor-endorses-apc-discount-action/submission',
+                      '/demo/editor-endorses-apc-discount-action/submission',
                       {
                         stage: 3,
                         action: 0
@@ -135,7 +136,7 @@ class DemoTabs extends React.Component {
                   <MenuItem
                     href={urlify(
                       { username: 'engelbart-demo' },
-                      '/research-demo/editor-assesses-reviewed-submission/submission',
+                      '/demo/editor-assesses-revised-submission/submission',
                       {
                         stage: 2,
                         action: 1,
@@ -149,7 +150,7 @@ class DemoTabs extends React.Component {
                   <MenuItem
                     href={urlify(
                       { username: 'engelbart-demo' },
-                      '/research-demo/editor-publishes-submission/submission',
+                      '/demo/editor-publishes-submission/submission',
                       {
                         stage: 3,
                         action: 1
@@ -179,7 +180,7 @@ class DemoTabs extends React.Component {
                   <MenuItem
                     href={urlify(
                       {
-                        hostname: 'research-demo.sci.pe',
+                        hostname: 'demo.sci.pe',
                         username: 'engelbart-demo'
                       },
                       '/'
@@ -190,7 +191,7 @@ class DemoTabs extends React.Component {
                   <MenuItem
                     href={urlify(
                       {
-                        hostname: 'research-demo.sci.pe',
+                        hostname: 'demo.sci.pe',
                         username: 'engelbart-demo'
                       },
                       '/issues'
@@ -201,7 +202,7 @@ class DemoTabs extends React.Component {
                   <MenuItem
                     href={urlify(
                       {
-                        hostname: 'research-demo.sci.pe',
+                        hostname: 'demo.sci.pe',
                         username: 'engelbart-demo'
                       },
                       '/rfas'
@@ -213,7 +214,7 @@ class DemoTabs extends React.Component {
                   <MenuItem
                     href={urlify(
                       {
-                        hostname: 'research-demo.sci.pe',
+                        hostname: 'demo.sci.pe',
                         username: 'engelbart-demo'
                       },
                       '/ceballos2017a-demo'
@@ -247,7 +248,7 @@ class DemoTabs extends React.Component {
                   capsule={true}
                   href={urlify(
                     { username: 'engelbart-demo' },
-                    '/settings/organization/sri-demo/services'
+                    '/settings/organization/demo-org/services'
                   )}
                 >
                   Launch demo
@@ -291,7 +292,7 @@ class DemoTabs extends React.Component {
                   capsule={true}
                   href={urlify(
                     { username: 'taylor-demo' },
-                    '/research-demo/typesetter-typesets-submission/submission',
+                    '/demo/typesetter-assesses-document-to-typeset/submission',
                     {
                       stage: 0,
                       action: 4
@@ -318,7 +319,7 @@ class DemoTabs extends React.Component {
                   capsule={true}
                   href={urlify(
                     { username: 'taylor-demo' },
-                    '/research-demo/typesetter-previews-typeset-submission/submission',
+                    '/demo/typesetter-typesets-document/submission',
                     {
                       stage: 0,
                       action: 4
@@ -398,7 +399,7 @@ class DemoTabs extends React.Component {
                   <MenuItem
                     href={urlify(
                       { username: 'licklider-demo' },
-                      '/research-demo/reviewer-accepts-invitation/submission',
+                      '/demo/reviewer-accepts-invitation/submission',
                       {
                         stage: 1,
                         action: 0
@@ -410,7 +411,7 @@ class DemoTabs extends React.Component {
                   <MenuItem
                     href={urlify(
                       { username: 'licklider-demo' },
-                      '/research-demo/reviewer-reviews-submission/submission',
+                      '/demo/reviewer-reviews-submission/submission',
                       {
                         stage: 1,
                         action: 0
@@ -422,7 +423,7 @@ class DemoTabs extends React.Component {
                   <MenuItem
                     href={urlify(
                       { username: 'licklider-demo' },
-                      '/research-demo/reviewer-reviews-revised-submission/submission',
+                      '/demo/reviewer-reviews-revised-submission/submission',
                       {
                         stage: 3,
                         action: 0
@@ -483,8 +484,8 @@ class DemoTabs extends React.Component {
                   Launch demo
                   <MenuItem
                     href={urlify(
-                      { username: 'de-soto-demo' },
-                      '/research-demo/author-prepares-submission/submission',
+                      { username: 'hamilton-demo' },
+                      '/demo/author-prepares-submission/submission',
                       {
                         stage: 0,
                         action: 0
@@ -496,7 +497,7 @@ class DemoTabs extends React.Component {
                   <MenuItem
                     href={urlify(
                       { username: 'hamilton-demo' },
-                      '/research-demo/author-makes-declarations/submission',
+                      '/demo/author-makes-declarations/submission',
                       {
                         stage: 0,
                         action: 1
@@ -523,7 +524,7 @@ class DemoTabs extends React.Component {
                 <PaperButtonLink
                   raised={true}
                   capsule={true}
-                  href={urlify({ username: 'de-soto-demo' }, '/')}
+                  href={urlify({ username: 'hamilton-demo' }, '/')}
                 >
                   Launch demo
                 </PaperButtonLink>
@@ -546,7 +547,7 @@ class DemoTabs extends React.Component {
                   capsule={true}
                   href={urlify(
                     { username: 'hamilton-demo' },
-                    '/research-demo/author-prepares-revision/submission',
+                    '/demo/author-prepares-revision/submission',
                     {
                       stage: 2,
                       action: 0,
@@ -566,24 +567,50 @@ class DemoTabs extends React.Component {
               <h3 className={bem`__item-title`}>Publish</h3>
               <div className={bem`__item-content`}>
                 <p className={bem`__text`}>
-                  Benefit from published articles optimized for the web and
-                  easily accessible and discoverable by both humans and
-                  machines.
+                  Negotiate <abbr title="Article processing charges">APC</abbr>,
+                  confirm contributions and benefit from published articles
+                  optimized for the web and easily accessible and discoverable
+                  by both humans and machines.
                 </p>
 
-                <PaperButtonLink
-                  raised={true}
-                  capsule={true}
-                  href={urlify(
-                    {
-                      username: 'de-soto-demo',
-                      hostname: 'research-demo.sci.pe'
-                    },
-                    '/desoto2017a-demo'
-                  )}
-                >
+                <ButtonMenu raised={true} capsule={true}>
                   Launch demo
-                </PaperButtonLink>
+                  <MenuItem
+                    href={urlify(
+                      { username: 'hamilton-demo' },
+                      '/demo/author-requests-apc-discount/submission',
+                      {
+                        stage: 3,
+                        action: 0
+                      }
+                    )}
+                  >
+                    Request APC discount
+                  </MenuItem>
+                  <MenuItem
+                    href={urlify(
+                      { username: 'hamilton-demo' },
+                      '/demo/author-confirms-contribution-and-identity/submission',
+                      {
+                        stage: 3,
+                        action: 0
+                      }
+                    )}
+                  >
+                    Confirm contribution and identity
+                  </MenuItem>
+                  <MenuItem
+                    href={urlify(
+                      { username: 'hamilton-demo' },
+                      '/payne2016a-demo',
+                      {
+                        hostname: 'demo.sci.pe'
+                      }
+                    )}
+                  >
+                    View published article
+                  </MenuItem>
+                </ButtonMenu>
               </div>
             </li>
           </ul>

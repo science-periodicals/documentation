@@ -41,7 +41,7 @@ export default class SplashPage extends React.Component {
             <div className={bem`__splash-cta`}>
               <ButtonMenu title="Get Started" raised={true} align="right">
                 <span style={{ paddingLeft: '8px' }}>Get Started</span>
-                {/*<MenuItem to="/get-started/quick-start">View demo</MenuItem>*/}
+                <MenuItem to="/get-started/quick-start">View demo</MenuItem>
                 <MenuItem href="/new/journal">
                   Start a journal hosted by <TextLogo />
                 </MenuItem>
@@ -58,7 +58,6 @@ export default class SplashPage extends React.Component {
         </div>
 
         <ul className={bem`__doc-list @__clear-list-styles `}>
-          {/*
           <li>
             <Card className={bem`__card --editor-user-guide`}>
               <div className={bem`__card-header`}>
@@ -75,7 +74,7 @@ export default class SplashPage extends React.Component {
                 />
               </div>
             </Card>
-          </li>*/}
+          </li>
 
           <li>
             <Card className={bem`__card --workflows`}>
@@ -190,23 +189,23 @@ export default class SplashPage extends React.Component {
             </Card>
           </li>
 
-          {/* <li>
-              <Card className={bem`__card --ontology`}>
+          <li>
+            <Card className={bem`__card --ontology`}>
               <div className={bem`__card-header`}>
-              <h2 className={bem`__title @__default-ui-type--headline`}>
-              <Link to={{ pathname: `${match.path}/ontology` }}>
-              Ontology
-              </Link>
-              </h2>
-              <Iconoclass
-              className={bem`__card-icon`}
-              iconName="label"
-              round={true}
-              size="4rem"
-              />
+                <h2 className={bem`__title @__default-ui-type--headline`}>
+                  <Link to={{ pathname: `${match.path}/ontology` }}>
+                    Ontology
+                  </Link>
+                </h2>
+                <Iconoclass
+                  className={bem`__card-icon`}
+                  iconName="label"
+                  round={true}
+                  size="4rem"
+                />
               </div>
-              </Card>
-              </li> */}
+            </Card>
+          </li>
 
           <li>
             <Card className={bem`__card --install`}>
