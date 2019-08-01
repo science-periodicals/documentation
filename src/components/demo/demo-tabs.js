@@ -194,30 +194,7 @@ class DemoTabs extends React.Component {
                         hostname: 'demo.sci.pe',
                         username: 'engelbart-demo'
                       },
-                      '/issues'
-                    )}
-                  >
-                    Issues
-                  </MenuItem>
-                  <MenuItem
-                    href={urlify(
-                      {
-                        hostname: 'demo.sci.pe',
-                        username: 'engelbart-demo'
-                      },
-                      '/rfas'
-                    )}
-                  >
-                    Request for articles
-                  </MenuItem>
-                  {/* TODO list per type (math article, article with code etc.) ? or link to one with all types */}
-                  <MenuItem
-                    href={urlify(
-                      {
-                        hostname: 'demo.sci.pe',
-                        username: 'engelbart-demo'
-                      },
-                      '/ceballos2017a-demo'
+                      '/payne2016a-demo'
                     )}
                   >
                     Published article
@@ -247,7 +224,7 @@ class DemoTabs extends React.Component {
                   raised={true}
                   capsule={true}
                   href={urlify(
-                    { username: 'engelbart-demo' },
+                    { username: 'taylor-demo' },
                     '/settings/organization/demo-org/services'
                   )}
                 >
@@ -642,7 +619,8 @@ function urlify({ hostname, username }, pathname, qs = {}) {
       url = `https://${hostname}${qs ? `?${qs}` : ''}`;
     }
   } else {
-    url = `${pathname}?${querystring.stringify(qs)}`;
+    const s = querystring.stringify(qs);
+    url = `${pathname}${s ? `?${s}` : ''}`;
   }
 
   const root =
