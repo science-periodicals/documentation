@@ -52,6 +52,9 @@
       }
     }
   }
+  &__launch-button {
+    margin: 0 auto;
+  }
 
   &__item-content {
     flex: 1 0 auto;

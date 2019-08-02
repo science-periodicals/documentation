@@ -63,6 +63,7 @@ class DemoTabs extends React.Component {
                 </p>
 
                 <PaperButtonLink
+                  className="demo-tabs__launch-button"
                   raised={true}
                   capsule={true}
                   href={urlify(
@@ -87,6 +88,7 @@ class DemoTabs extends React.Component {
                 </p>
 
                 <PaperButtonLink
+                  className="demo-tabs__launch-button"
                   raised={true}
                   capsule={true}
                   href={urlify({ username: 'engelbart-demo' }, '/')}
@@ -107,7 +109,11 @@ class DemoTabs extends React.Component {
                   production quality content with a powerful user interface
                   supporting annotations.
                 </p>
-                <ButtonMenu raised={true} capsule={true}>
+                <ButtonMenu
+                  raised={true}
+                  capsule={true}
+                  className="demo-tabs__launch-button"
+                >
                   Launch demo
                   <MenuItem
                     href={urlify(
@@ -175,7 +181,11 @@ class DemoTabs extends React.Component {
                   new articles all from your searchable journal homepages.
                 </p>
 
-                <ButtonMenu raised={true} capsule={true}>
+                <ButtonMenu
+                  raised={true}
+                  capsule={true}
+                  className="demo-tabs__launch-button"
+                >
                   Launch demo
                   <MenuItem
                     href={urlify(
@@ -221,6 +231,7 @@ class DemoTabs extends React.Component {
                   Set up typesetting services and production requirements.
                 </p>
                 <PaperButtonLink
+                  className="demo-tabs__launch-button"
                   raised={true}
                   capsule={true}
                   href={urlify(
@@ -245,6 +256,7 @@ class DemoTabs extends React.Component {
                 </p>
 
                 <PaperButtonLink
+                  className="demo-tabs__launch-button"
                   raised={true}
                   capsule={true}
                   href={urlify({ username: 'taylor-demo' }, '/')}
@@ -265,6 +277,7 @@ class DemoTabs extends React.Component {
                 </p>
 
                 <PaperButtonLink
+                  className="demo-tabs__launch-button"
                   raised={true}
                   capsule={true}
                   href={urlify(
@@ -292,6 +305,7 @@ class DemoTabs extends React.Component {
                 </p>
 
                 <PaperButtonLink
+                  className="demo-tabs__launch-button"
                   raised={true}
                   capsule={true}
                   href={urlify(
@@ -328,6 +342,7 @@ class DemoTabs extends React.Component {
                   remain anonymous.
                 </p>
                 <PaperButtonLink
+                  className="demo-tabs__launch-button"
                   raised={true}
                   capsule={true}
                   href={urlify(
@@ -352,6 +367,7 @@ class DemoTabs extends React.Component {
                 </p>
 
                 <PaperButtonLink
+                  className="demo-tabs__launch-button"
                   raised={true}
                   capsule={true}
                   href={urlify({ username: 'licklider-demo' }, '/')}
@@ -371,7 +387,11 @@ class DemoTabs extends React.Component {
                   Review and annotate submissions, with direct access to all
                   versions and parts of the content.
                 </p>
-                <ButtonMenu raised={true} capsule={true}>
+                <ButtonMenu
+                  raised={true}
+                  capsule={true}
+                  className="demo-tabs__launch-button"
+                >
                   Launch demo
                   <MenuItem
                     href={urlify(
@@ -425,6 +445,7 @@ class DemoTabs extends React.Component {
                 </p>
 
                 <PaperButtonLink
+                  className="demo-tabs__launch-button"
                   raised={true}
                   capsule={true}
                   href={urlify(
@@ -457,7 +478,11 @@ class DemoTabs extends React.Component {
                   collaboratively.
                 </p>
 
-                <ButtonMenu raised={true} capsule={true}>
+                <ButtonMenu
+                  raised={true}
+                  capsule={true}
+                  className="demo-tabs__launch-button"
+                >
                   Launch demo
                   <MenuItem
                     href={urlify(
@@ -502,6 +527,7 @@ class DemoTabs extends React.Component {
                   raised={true}
                   capsule={true}
                   href={urlify({ username: 'hamilton-demo' }, '/')}
+                  className="demo-tabs__launch-button"
                 >
                   Launch demo
                 </PaperButtonLink>
@@ -520,6 +546,7 @@ class DemoTabs extends React.Component {
                 </p>
 
                 <PaperButtonLink
+                  className="demo-tabs__launch-button"
                   raised={true}
                   capsule={true}
                   href={urlify(
@@ -550,7 +577,11 @@ class DemoTabs extends React.Component {
                   humans and machines.
                 </p>
 
-                <ButtonMenu raised={true} capsule={true}>
+                <ButtonMenu
+                  raised={true}
+                  capsule={true}
+                  className="demo-tabs__launch-button"
+                >
                   Launch demo
                   <MenuItem
                     href={urlify(
