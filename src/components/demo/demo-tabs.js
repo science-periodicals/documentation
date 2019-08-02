@@ -58,8 +58,8 @@ class DemoTabs extends React.Component {
 
               <div className={bem`__item-content`}>
                 <p className={bem`__text`}>
-                  Organize your staff, setup editorial workflows, blinding
-                  requirements, publication types and journal styles.
+                  Organize your staff and set up editorial workflows, blinding
+                  requirements, publication types, journal styles and more.
                 </p>
 
                 <PaperButtonLink
@@ -82,8 +82,8 @@ class DemoTabs extends React.Component {
               <h3 className={bem`__item-title`}>Track</h3>
               <div className={bem`__item-content`}>
                 <p className={bem`__text`}>
-                  Meet your new publishing inbox where you can manage all your
-                  journals incoming submissions.
+                  Meet your new publishing inbox, where you can manage incoming
+                  submissions for all your journals.
                 </p>
 
                 <PaperButtonLink
@@ -104,7 +104,7 @@ class DemoTabs extends React.Component {
               <div className={bem`__item-content`}>
                 <p className={bem`__text`}>
                   Invite reviewers, and make your editorial decisions on
-                  production quality content with a powerful interface
+                  production quality content with a powerful user interface
                   supporting annotations.
                 </p>
                 <ButtonMenu raised={true} capsule={true}>
@@ -124,7 +124,7 @@ class DemoTabs extends React.Component {
                   <MenuItem
                     href={urlify(
                       { username: 'engelbart-demo' },
-                      '/demo/editor-endorses-apc-discount-action/submission',
+                      '/demo/editor-endorses-apc-discount/submission',
                       {
                         stage: 3,
                         action: 0
@@ -171,8 +171,8 @@ class DemoTabs extends React.Component {
               <div className={bem`__item-content`}>
                 <p className={bem`__text`}>
                   Publish high quality content optimized for the web, organize
-                  it into issues and special issues and request for new articles
-                  all from your searchable journal homepages.
+                  it into issues and special issues, and display requests for
+                  new articles all from your searchable journal homepages.
                 </p>
 
                 <ButtonMenu raised={true} capsule={true}>
@@ -218,7 +218,7 @@ class DemoTabs extends React.Component {
 
               <div className={bem`__item-content`}>
                 <p className={bem`__text`}>
-                  Setup typesetting services and production requirements.
+                  Set up typesetting services and production requirements.
                 </p>
                 <PaperButtonLink
                   raised={true}
@@ -240,8 +240,8 @@ class DemoTabs extends React.Component {
               <h3 className={bem`__item-title`}>Track</h3>
               <div className={bem`__item-content`}>
                 <p className={bem`__text`}>
-                  Meet your new publishing inbox where you can keep track of all
-                  submissions requiring your attention.
+                  Meet your new publishing inbox, where you can keep track of
+                  all submissions requiring your attention.
                 </p>
 
                 <PaperButtonLink
@@ -288,7 +288,7 @@ class DemoTabs extends React.Component {
               <h3 className={bem`__item-title`}>Preview</h3>
               <div className={bem`__item-content`}>
                 <p className={bem`__text`}>
-                  Get access to production preview at any stage of a workflow.
+                  Get access to production previews at any stage of a workflow.
                 </p>
 
                 <PaperButtonLink
@@ -323,8 +323,8 @@ class DemoTabs extends React.Component {
 
               <div className={bem`__item-content`}>
                 <p className={bem`__text`}>
-                  Setup your reviewer profile so editors can request your
-                  service even for workflows where reviewers identity needs to
+                  Set up your reviewer profile so editors can request your
+                  services even for workflows where reviewer identity needs to
                   remain anonymous.
                 </p>
                 <PaperButtonLink
@@ -347,7 +347,7 @@ class DemoTabs extends React.Component {
               <h3 className={bem`__item-title`}>Track</h3>
               <div className={bem`__item-content`}>
                 <p className={bem`__text`}>
-                  Meet your new publishing inbox where you can manage all the
+                  Meet your new publishing inbox, where you can manage all the
                   submissions that require your attention.
                 </p>
 
@@ -369,7 +369,7 @@ class DemoTabs extends React.Component {
               <div className={bem`__item-content`}>
                 <p className={bem`__text`}>
                   Review and annotate submissions, with direct access to all
-                  versions and parts of the content from one place.
+                  versions and parts of the content.
                 </p>
                 <ButtonMenu raised={true} capsule={true}>
                   Launch demo
@@ -515,7 +515,7 @@ class DemoTabs extends React.Component {
               <h3 className={bem`__item-title`}>Revise</h3>
               <div className={bem`__item-content`}>
                 <p className={bem`__text`}>
-                  Revise your manuscript based on editors and reviewers feedback
+                  Revise your manuscript based on editor and reviewer feedback
                   made available directly in context.
                 </p>
 
@@ -545,9 +545,9 @@ class DemoTabs extends React.Component {
               <div className={bem`__item-content`}>
                 <p className={bem`__text`}>
                   Negotiate <abbr title="Article processing charges">APC</abbr>,
-                  confirm contributions and benefit from published articles
-                  optimized for the web and easily accessible and discoverable
-                  by both humans and machines.
+                  confirm contributions, and benefit from web-optimized
+                  published articles, easily accessible and discoverable by both
+                  humans and machines.
                 </p>
 
                 <ButtonMenu raised={true} capsule={true}>
@@ -570,7 +570,7 @@ class DemoTabs extends React.Component {
                       '/demo/author-confirms-contribution-and-identity/submission',
                       {
                         stage: 3,
-                        action: 0
+                        action: 1
                       }
                     )}
                   >
