@@ -69,6 +69,8 @@ class DemoTabs extends React.Component {
                     { username: 'engelbart-demo' },
                     '/settings/journal/demo/journal'
                   )}
+                  target="_blank"
+                  rel="noopener"
                 >
                   Launch demo
                 </PaperButtonLink>
@@ -90,6 +92,8 @@ class DemoTabs extends React.Component {
                   raised={true}
                   capsule={true}
                   href={urlify({ username: 'engelbart-demo' }, '/')}
+                  target="_blank"
+                  rel="noopener"
                 >
                   Launch demo
                 </PaperButtonLink>
@@ -118,6 +122,8 @@ class DemoTabs extends React.Component {
                         action: 3
                       }
                     )}
+                    target="_blank"
+                    rel="noopener"
                   >
                     Assess a submission based on reviewer reviews
                   </MenuItem>
@@ -130,6 +136,8 @@ class DemoTabs extends React.Component {
                         action: 0
                       }
                     )}
+                    target="_blank"
+                    rel="noopener"
                   >
                     Endorse author APC discount request
                   </MenuItem>
@@ -143,6 +151,8 @@ class DemoTabs extends React.Component {
                         version: '0.0.0-0'
                       }
                     )}
+                    target="_blank"
+                    rel="noopener"
                   >
                     Assess a submission based on reviewer reviews and author
                     responses
@@ -156,6 +166,8 @@ class DemoTabs extends React.Component {
                         action: 1
                       }
                     )}
+                    target="_blank"
+                    rel="noopener"
                   >
                     Publish a manuscript
                   </MenuItem>
@@ -185,6 +197,8 @@ class DemoTabs extends React.Component {
                       },
                       '/'
                     )}
+                    target="_blank"
+                    rel="noopener"
                   >
                     Journal homepage
                   </MenuItem>
@@ -196,6 +210,8 @@ class DemoTabs extends React.Component {
                       },
                       '/payne2016a-demo'
                     )}
+                    target="_blank"
+                    rel="noopener"
                   >
                     Published article
                   </MenuItem>
@@ -227,6 +243,8 @@ class DemoTabs extends React.Component {
                     { username: 'taylor-demo' },
                     '/settings/organization/demo-org/services'
                   )}
+                  target="_blank"
+                  rel="noopener"
                 >
                   Launch demo
                 </PaperButtonLink>
@@ -248,6 +266,8 @@ class DemoTabs extends React.Component {
                   raised={true}
                   capsule={true}
                   href={urlify({ username: 'taylor-demo' }, '/')}
+                  target="_blank"
+                  rel="noopener"
                 >
                   Launch demo
                 </PaperButtonLink>
@@ -275,6 +295,8 @@ class DemoTabs extends React.Component {
                       action: 4
                     }
                   )}
+                  target="_blank"
+                  rel="noopener"
                 >
                   Launch demo
                 </PaperButtonLink>
@@ -302,6 +324,8 @@ class DemoTabs extends React.Component {
                       action: 4
                     }
                   )}
+                  target="_blank"
+                  rel="noopener"
                 >
                   Launch demo
                 </PaperButtonLink>
@@ -334,6 +358,8 @@ class DemoTabs extends React.Component {
                     { username: 'licklider-demo' },
                     '/settings/profile/bio'
                   )}
+                  target="_blank"
+                  rel="noopener"
                 >
                   Launch demo
                 </PaperButtonLink>
@@ -355,6 +381,8 @@ class DemoTabs extends React.Component {
                   raised={true}
                   capsule={true}
                   href={urlify({ username: 'licklider-demo' }, '/')}
+                  target="_blank"
+                  rel="noopener"
                 >
                   Launch demo
                 </PaperButtonLink>
@@ -382,6 +410,8 @@ class DemoTabs extends React.Component {
                         action: 0
                       }
                     )}
+                    target="_blank"
+                    rel="noopener"
                   >
                     Reviewer accepts invitation to review
                   </MenuItem>
@@ -394,6 +424,8 @@ class DemoTabs extends React.Component {
                         action: 0
                       }
                     )}
+                    target="_blank"
+                    rel="noopener"
                   >
                     Reviewer reviews submission
                   </MenuItem>
@@ -406,6 +438,8 @@ class DemoTabs extends React.Component {
                         action: 0
                       }
                     )}
+                    target="_blank"
+                    rel="noopener"
                   >
                     Reviewer reviews revised submission
                   </MenuItem>
@@ -431,6 +465,8 @@ class DemoTabs extends React.Component {
                     { username: 'licklider-demo' },
                     '/about/licklider-demo'
                   )}
+                  target="_blank"
+                  rel="noopener"
                 >
                   Launch demo
                 </PaperButtonLink>
@@ -468,6 +504,8 @@ class DemoTabs extends React.Component {
                         action: 0
                       }
                     )}
+                    target="_blank"
+                    rel="noopener"
                   >
                     Submit manuscript
                   </MenuItem>
@@ -480,6 +518,8 @@ class DemoTabs extends React.Component {
                         action: 1
                       }
                     )}
+                    target="_blank"
+                    rel="noopener"
                   >
                     Fill author declarations collaboratively
                   </MenuItem>
@@ -502,6 +542,8 @@ class DemoTabs extends React.Component {
                   raised={true}
                   capsule={true}
                   href={urlify({ username: 'hamilton-demo' }, '/')}
+                  target="_blank"
+                  rel="noopener"
                 >
                   Launch demo
                 </PaperButtonLink>
@@ -531,6 +573,8 @@ class DemoTabs extends React.Component {
                       version: '0.0.0-0'
                     }
                   )}
+                  target="_blank"
+                  rel="noopener"
                 >
                   Launch demo
                 </PaperButtonLink>
@@ -561,6 +605,8 @@ class DemoTabs extends React.Component {
                         action: 0
                       }
                     )}
+                    target="_blank"
+                    rel="noopener"
                   >
                     Request APC discount
                   </MenuItem>
@@ -573,17 +619,18 @@ class DemoTabs extends React.Component {
                         action: 1
                       }
                     )}
+                    target="_blank"
+                    rel="noopener"
                   >
                     Confirm contribution and identity
                   </MenuItem>
                   <MenuItem
                     href={urlify(
-                      { username: 'hamilton-demo' },
-                      '/payne2016a-demo',
-                      {
-                        hostname: 'demo.sci.pe'
-                      }
+                      { username: 'hamilton-demo', hostname: 'demo.sci.pe' },
+                      '/payne2016a-demo'
                     )}
+                    target="_blank"
+                    rel="noopener"
                   >
                     View published article
                   </MenuItem>
@@ -616,7 +663,7 @@ function urlify({ hostname, username }, pathname, qs = {}) {
     } else {
       const qs = querystring.stringify(omit(qs, ['hostname']));
 
-      url = `https://${hostname}${qs ? `?${qs}` : ''}`;
+      url = `https://${hostname}${pathname}${qs ? `?${qs}` : ''}`;
     }
   } else {
     const s = querystring.stringify(qs);
