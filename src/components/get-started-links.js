@@ -30,7 +30,11 @@ export default class GetStartedLinks extends React.Component {
       <div className={bem``}>
         <Card>
           <header className={bem`__header`}>
-            <Logo className={bem`__header-logo`} logo="science-periodicals" />
+            <Logo
+              className={bem`__header-logo`}
+              logo="science-periodicals"
+              alt="sci.pe (science periodicals) logo"
+            />
 
             {isDismissible ? (
               <Iconoclass

@@ -27,16 +27,26 @@ export default class SplashPage extends React.Component {
     return (
       <div className={bem`splash-page`}>
         <Helmet>
-          <title>Get started • sci.pe</title>
+          <title>sci.pe • science periodicals</title>
+          <meta
+            name="description"
+            content="sci.pe (science periodicals) is an all-inclusive open source scholarly publishing platform designed for open access journals"
+          />
+          <meta
+            name="keywords"
+            content="scipe,open access,open science,scholarly publishing,plateform,science,journals,publishing platform"
+          />
         </Helmet>
 
         <div className={bem`__splash`}>
           <Card className={bem`__splash-card`}>
             <h1 className={bem`__headline`}>Moving Science Forward</h1>
-            <h2 className={bem`__sub-headline`}>
-              <TextLogo /> brings editors, authors and reviewers together to
-              produce the most rigorous science at the lowest possible cost.
-            </h2>
+            <p className={bem`__sub-headline`}>
+              <TextLogo /> is an all-inclusive open source scholarly publishing
+              platform designed for open access journals. It allows editors,
+              authors and reviewers to work collaboratively to produce the most
+              rigorous science at the lowest possible cost.
+            </p>
 
             <div className={bem`__splash-cta`}>
               <ButtonMenu title="Get Started" raised={true} align="right">
