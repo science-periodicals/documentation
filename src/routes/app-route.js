@@ -71,7 +71,9 @@ const docSlugs = [
 ];
 
 router.get(
-  `/:slug(${docSlugs.join('|')}|pricing|features|terms|privacy|about|vision)?`,
+  `/:slug(${docSlugs.join(
+    '|'
+  )}|pricing|work-with-us|features|terms|privacy|about|vision)?`,
   (req, res, next) => {
     getBundlePaths('main', (err, bundles) => {
       if (err) return next(err);

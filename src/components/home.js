@@ -24,6 +24,7 @@ import SplashPage from './splash-page';
 import Page from './page';
 import PageToc from './page-toc';
 import PricingPage from './pricing-page';
+import HireUsPage from './hire-us-page';
 import VisionPage from './vision-page';
 import FeaturePage from './feature-page';
 import GetStartedLinks from './get-started-links';
@@ -289,6 +290,11 @@ class Home extends React.Component {
                     exact
                     path="/get-started/pricing"
                     render={props => <PricingPage {...props} user={user} />}
+                  />
+                  <Route
+                    exact
+                    path="/get-started/work-with-us"
+                    render={props => <HireUsPage {...props} user={user} />}
                   />
                   <Route
                     exact
