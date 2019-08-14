@@ -40,7 +40,9 @@ export default class SplashPage extends React.Component {
 
         <div className={bem`__splash`}>
           <Card className={bem`__splash-card`}>
-            <h1 className={bem`__headline`}>Moving Science Forward</h1>
+            <h1 className={bem`__headline`}>
+              Moving Scholarly Publishing Forward
+            </h1>
             <p className={bem`__sub-headline`}>
               <TextLogo /> is an all-inclusive open source scholarly publishing
               platform designed for open access journals. It allows editors,

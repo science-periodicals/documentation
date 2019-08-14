@@ -1,17 +1,17 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Card, PaperButtonLink } from '@scipe/ui';
+import Iconoclass from '@scipe/iconoclass';
 
 export default class HireUsPage extends React.Component {
   render() {
     return (
-      <Card>
+      <div className="hire-us-page">
         <Helmet>
           <title>Work with us • sci.pe</title>
         </Helmet>
-
-        <header>
-          <h1>Work with us</h1>
+        <h1 className="hire-us-page__title">Work with us</h1>
+        <header className="hire-us-page__header">
           <p>
             Our mission is to help a wide range of journals, services and
             organizations to move scholarly publishing forward.
@@ -23,55 +23,81 @@ export default class HireUsPage extends React.Component {
             over entire aspects of the creative and/or development process.
           </p>
         </header>
+        <Card className="hire-us-page__card">
+          <div className="hire-us-page__contents">
+            <section className="hire-us-page__section hire-us-page__section--centered">
+              <div className="hire-us-page__sub-section-header">
+                <Iconoclass iconName="hypermedia" round={true} size="32px" />
+                <h2 className="hire-us-page__sub-title">Process</h2>
+              </div>
+              <p>
+                We believe firmly that scholarly publishing products should be{' '}
+                <a href="https://vimeo.com/36579366">designed on principles</a>.
+              </p>
+              <p>
+                Our process starts by working with you to understand{' '}
+                <em>your</em> principles.
+              </p>
+              <p>
+                We then follow a user-centered design process to deliver well
+                documented and tested results.
+              </p>
+            </section>
 
-        <section>
-          <h2>Process</h2>
+            <section className="hire-us-page__section hire-us-page__section--centered">
+              <div className="hire-us-page__sub-section-header">
+                <Iconoclass iconName="supervisor" round={true} size="32px" />
+                <h2 className="hire-us-page__sub-title">About us</h2>
+              </div>
+              <p>
+                We are the team who built the{' '}
+                <a href="https://sci.pe">sci.pe</a> scholarly publishing
+                platform.
+                <br />
+                We are thoughtful, thorough, and deliver solid, meaningful
+                results.
+              </p>
+              <p></p>
 
-          <p>
-            We believe firmly that scholarly publishing products should be{' '}
-            <a href="https://vimeo.com/36579366">designed on principles</a>.
-          </p>
-          <p>
-            Our process starts by working with you to understand <em>your</em>{' '}
-            principles.
-          </p>
-          <p>
-            We then follow a user-centered design process to deliver well
-            documented and tested results.
-          </p>
-        </section>
+              <ul className="hire-us-page__people-list">
+                <li className="hire-us-page__people-list__item">
+                  Sébastien Ballesteros
+                  <br />
+                  <span className="hire-us-page__people-list__item__spec">
+                    Full stack dev, architecture, markup best practice
+                  </span>
+                  <br />
+                  <PaperButtonLink href="https://sballesteros.github.io/resume/">
+                    resume
+                  </PaperButtonLink>
+                </li>
 
-        <section>
-          <h2>About us</h2>
+                <li className="hire-us-page__people-list__item">
+                  Erik Wysocan
+                  <br />
+                  <span className="hire-us-page__people-list__item__spec">
+                    UI/UIX, front-end dev and creative direction
+                  </span>
+                  <br />
+                  <PaperButtonLink href="https://new-cairo-sky.github.io/resume/">
+                    resume
+                  </PaperButtonLink>
+                </li>
+              </ul>
+            </section>
 
-          <p>
-            We are thoughtful, thorough, and deliver solid, meaningful results.
-          </p>
+            <section className="hire-us-page__section hire-us-page__section--centered">
+              <div className="hire-us-page__sub-section-header">
+                <Iconoclass iconName="email" round={true} size="32px" />
+                <h2 className="hire-us-page__sub-title">Contact us</h2>
+              </div>
+              <p>We look forward to discussing your needs.</p>
 
-          <ul>
-            <li>
-              Erik Wysocan
-              <PaperButtonLink href="https://new-cairo-sky.github.io/resume/">
-                resume
-              </PaperButtonLink>
-            </li>
-
-            <li>
-              Sébastien Ballesteros
-              <PaperButtonLink href="https://sballesteros.github.io/resume/">
-                resume
-              </PaperButtonLink>
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Contact us</h2>
-          <p>We look forward to discussing your needs.</p>
-
-          <PaperButtonLink raised={true}>Get in touch</PaperButtonLink>
-        </section>
-      </Card>
+              <PaperButtonLink raised={true}>Get in touch</PaperButtonLink>
+            </section>
+          </div>
+        </Card>
+      </div>
     );
   }
 }

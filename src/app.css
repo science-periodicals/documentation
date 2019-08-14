@@ -8,6 +8,7 @@
 @import './components/get-started-links.css';
 @import './components/splash-page.css';
 @import './components/pricing-page.css';
+@import './components/hire-us-page.css';
 @import './components/markup.css';
 @import './components/role-benefits-tabs.css';
 @import './components/legal.css';
@@ -22,7 +23,6 @@
 @import './components/jsonld-example.css';
 @import './components/code-example.css';
 @import './components/info.css';
-
 
 /* Demo CSS */
 @import './components/video-player.css';

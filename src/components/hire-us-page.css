@@ -1,0 +1,67 @@
+.hire-us-page {
+  font: var(--ui-type--big);
+
+  &__title {
+    font: var(--ui-type--display-1);
+    color: var(--ui-type--display-1__color);
+    letter-spacing: var(--ui-type--display-1__letter-spacing);
+    text-transform: capitalize;
+    text-align: center;
+    margin: var(--lgrd) var(--mgrd) 0;
+    padding-bottom: var(--mgrd);
+    box-sizing: border-box;
+  }
+
+  &__sub-title {
+    font: var(--ui-type--subhead-1);
+
+    letter-spacing: var(--ui-type--subhead-1__letter-spacing);
+    margin-bottom: var(--mgrd);
+    text-align: center;
+  }
+
+  &__contents {
+    padding: var(--mgrd) 0;
+  }
+
+  &__header {
+    font: var(--ui-type--big);
+    color: var(--ui-type--big__color);
+    letter-spacing: var(--ui-type--big__letter-spacing);
+    margin: var(--mgrd) var(--lgrd) var(--mgrd) var(--lgrd);
+  }
+
+  &__sub-section-header {
+    margin-bottom: var(--lgrd);
+    text-align: center;
+    & .iconoclass {
+      color: var(--accent-color);
+    }
+  }
+
+  &__section {
+    padding: var(--lgrd) var(--mgrd);
+    border-bottom: 1px solid var(--ruling-color);
+    &:last-of-type {
+      border-bottom: none;
+    }
+    &--centered {
+      text-align: center;
+    }
+  }
+
+  &__people-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &__item {
+      padding: 0;
+      margin: 0 0 var(--sgrd);
+
+      &__spec {
+        color: var(--text-color--light);
+      }
+    }
+  }
+}
