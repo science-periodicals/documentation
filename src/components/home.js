@@ -359,7 +359,7 @@ class Home extends React.Component {
               )}
 
             <AppLayoutFooter>
-              <Footer hideCopyright={true} />
+              <Footer hideCopyright={true} mode="overview" />
             </AppLayoutFooter>
           </AppLayout>
         </LinkInterceptor>

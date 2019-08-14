@@ -34,7 +34,7 @@ export default class SplashPage extends React.Component {
           />
           <meta
             name="keywords"
-            content="scipe,open access,open science,scholarly publishing,plateform,science,journals,publishing platform"
+            content="scipe,open access,open science,scholarly publishing,platform,science,journals,publishing platform"
           />
         </Helmet>
 

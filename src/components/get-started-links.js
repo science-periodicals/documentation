@@ -64,6 +64,12 @@ export default class GetStartedLinks extends React.Component {
                 </Link>
               </li>
               <li className={bem`__nav-list-item`}>
+                <Link to="/get-started/work-with-us">
+                  <Iconoclass iconName="smartAction" size="16px" />
+                  Work with us
+                </Link>
+              </li>
+              <li className={bem`__nav-list-item`}>
                 {isLoggedIn ? (
                   <a href="/">
                     <Iconoclass iconName="exitToApp" size="16px" />

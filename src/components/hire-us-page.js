@@ -9,6 +9,14 @@ export default class HireUsPage extends React.Component {
       <div className="hire-us-page">
         <Helmet>
           <title>Work with us • sci.pe</title>
+          <meta
+            name="description"
+            content="Our mission is to help a wide range of journals, services and organizations to move scholarly publishing forward"
+          />
+          <meta
+            name="keywords"
+            content="scipe,open access,open science,scholarly publishing,platform,science,journals,publishing platform,consulting,custom development,hire"
+          />
         </Helmet>
         <h1 className="hire-us-page__title">Work with us</h1>
         <header className="hire-us-page__header">
@@ -47,7 +55,7 @@ export default class HireUsPage extends React.Component {
             <section className="hire-us-page__section hire-us-page__section--centered">
               <div className="hire-us-page__sub-section-header">
                 <Iconoclass iconName="supervisor" round={true} size="32px" />
-                <h2 className="hire-us-page__sub-title">About us</h2>
+                <h2 className="hire-us-page__sub-title">About Us</h2>
               </div>
               <p>
                 We are the team who built the{' '}
@@ -64,10 +72,14 @@ export default class HireUsPage extends React.Component {
                   Sébastien Ballesteros
                   <br />
                   <span className="hire-us-page__people-list__item__spec">
-                    Full stack dev, architecture, markup best practice
+                    Full stack dev, architecture, markup best practices
                   </span>
                   <br />
-                  <PaperButtonLink href="https://sballesteros.github.io/resume/">
+                  <PaperButtonLink
+                    href="https://sballesteros.github.io/resume/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     resume
                   </PaperButtonLink>
                 </li>
@@ -76,13 +88,18 @@ export default class HireUsPage extends React.Component {
                   Erik Wysocan
                   <br />
                   <span className="hire-us-page__people-list__item__spec">
-                    UI/UIX, front-end dev and creative direction
+                    UI/UX, front-end dev and creative direction
                   </span>
                   <br />
-                  <PaperButtonLink href="https://new-cairo-sky.github.io/resume/">
+                  <PaperButtonLink
+                    href="https://new-cairo-sky.github.io/resume/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     resume
                   </PaperButtonLink>
                 </li>
+
                 <li className="hire-us-page__people-list__item">
                   Tiffany Bogich
                   <br />
@@ -97,11 +114,13 @@ export default class HireUsPage extends React.Component {
             <section className="hire-us-page__section hire-us-page__section--centered">
               <div className="hire-us-page__sub-section-header">
                 <Iconoclass iconName="email" round={true} size="32px" />
-                <h2 className="hire-us-page__sub-title">Contact us</h2>
+                <h2 className="hire-us-page__sub-title">Contact Us</h2>
               </div>
               <p>We look forward to discussing your needs.</p>
 
-              <PaperButtonLink raised={true}>Get in touch</PaperButtonLink>
+              <PaperButtonLink raised={true} href="mailto:contact@sci.pe">
+                Get in touch
+              </PaperButtonLink>
             </section>
           </div>
         </Card>
