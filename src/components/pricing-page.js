@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Helmet } from 'react-helmet-async';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { PaperButtonLink, bemify, TextLogo } from '@scipe/ui';
 import { getId } from '@scipe/jsonld';
 import Iconoclass from '@scipe/iconoclass';
@@ -191,7 +192,15 @@ export default class PricingPage extends React.Component {
               experiences, develop a journal brand, or benefit from additional
               editorial and production staff support.
             </p>
-
+            <div className="pricing-page__professional-services__aside">
+              <Iconoclass iconName="info" />
+              <span>
+                The team behind sci.pe is also available for custom projects.
+                Visit our{' '}
+                <Link to="/get-started/work-with-us">work with us</Link> page
+                for more information.
+              </span>
+            </div>
             <ul className="pricing-page__professional-services__body-list">
               <li>Custom journal homepage design</li>
               <li>Custom icon sets and theme</li>

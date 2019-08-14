@@ -83,6 +83,14 @@ export default class HireUsPage extends React.Component {
                     resume
                   </PaperButtonLink>
                 </li>
+                <li className="hire-us-page__people-list__item">
+                  Tiffany Bogich
+                  <br />
+                  <span className="hire-us-page__people-list__item__spec">
+                    Client Relations
+                  </span>
+                  <br />
+                </li>
               </ul>
             </section>
 

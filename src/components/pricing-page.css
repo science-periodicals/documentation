@@ -470,6 +470,20 @@
         /* width: 24rem; */
       }
     }
+
+    &__aside {
+      border: 1px solid var(--ruling-color);
+      padding: var(--sgrd);
+      display: flex;
+      font: var(--ui-type);
+      align-items: center;
+      margin-bottom: var(--sgrd);
+
+      & .iconoclass {
+        margin-right: var(--sgrd);
+        color: var(--text-color--light);
+      }
+    }
   }
 
   &__benefits {
