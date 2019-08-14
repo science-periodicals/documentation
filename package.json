@@ -1,6 +1,6 @@
 {
   "name": "@scipe/documentation",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "sci.pe documentation",
   "main": "dist/index.js",
   "style": "src/index.css",
