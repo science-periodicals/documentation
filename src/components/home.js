@@ -194,6 +194,7 @@ class Home extends React.Component {
               slug !== undefined &&
               slug !== 'pricing' &&
               slug !== 'quick-start' &&
+              slug !== 'work-with-us' &&
               slug !== 'features' &&
               slug !== 'vision' &&
               leftExpanded
@@ -213,6 +214,7 @@ class Home extends React.Component {
                   slug !== 'pricing' &&
                   slug !== 'terms' &&
                   slug !== 'privacy' &&
+                  slug !== 'work-with-us' &&
                   slug !== 'quick-start' &&
                   slug !== 'features' &&
                   slug !== 'vision'
@@ -259,6 +261,7 @@ class Home extends React.Component {
             {slug &&
               slug !== 'features' &&
               slug !== 'pricing' &&
+              slug !== 'work-with-us' &&
               slug !== 'quick-start' && (
                 <AppLayoutLeft backgroundOnDesktop={false}>
                   <div className="home__toc">
