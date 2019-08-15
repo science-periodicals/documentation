@@ -107,6 +107,13 @@ export default class HireUsPage extends React.Component {
                     Client Relations
                   </span>
                   <br />
+                  <PaperButtonLink
+                    href="https://www.linkedin.com/in/tiffany-bogich/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    LinkedIn
+                  </PaperButtonLink>
                 </li>
               </ul>
             </section>
