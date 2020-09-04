@@ -110,7 +110,7 @@
     "highlight.js": "^9.15.9",
     "jsonld-markup": "^0.2.1",
     "jsonld-vis": "^2.1.0",
-    "marked": "^0.6.3",
+    "marked": "^0.7.0",
     "param-case": "^2.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
