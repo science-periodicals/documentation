@@ -107,7 +107,7 @@
     "decamelize": "^1.2.0",
     "ejs": "^2.6.2",
     "express": "^4.17.1",
-    "highlight.js": "^9.15.9",
+    "highlight.js": "^10.4.1",
     "jsonld-markup": "^0.2.1",
     "jsonld-vis": "^2.1.0",
     "marked": "^0.6.3",
